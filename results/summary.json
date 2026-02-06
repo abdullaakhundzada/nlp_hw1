@@ -1,0 +1,32 @@
+{
+  "data_statistics": {
+    "total_files": 76,
+    "total_pages": 18497,
+    "total_characters": 41203162,
+    "total_lines": 18497
+  },
+  "task1": {
+    "total_tokens": 5780390,
+    "total_types": 325067,
+    "type_token_ratio": 0.05623617091580326
+  },
+  "task2": {
+    "k": 4.827817055044398,
+    "beta": 0.7151540663401289,
+    "r_squared": 0.9993293700651154
+  },
+  "task3": {
+    "vocabulary_size": 1047,
+    "num_merges": 1000
+  },
+  "task4": {
+    "total_sentences": 1,
+    "avg_sentence_length": 5670197.0
+  },
+  "task5": {
+    "vocabulary_size": 145697
+  },
+  "extra_task": {
+    "confusion_patterns": 339
+  }
+}

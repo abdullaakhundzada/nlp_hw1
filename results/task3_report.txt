@@ -1,0 +1,25 @@
+
+=== BYTE PAIR ENCODING (BPE) REPORT ===
+
+Configuration:
+  Number of merges: 1000
+  Vocabulary size: 1047
+
+Sample Encoding/Decoding:
+  Original: f. lenormanın 1895-ci ildə tərtib etdiyi turan xəritəsi
+v
+dünya tarixinin turan dövrü (tarixi xülasə...
+  Encoded tokens: ['f</w>', 'l', 'en', 'or', 'm', 'anın</w>', '18', '9', '5</w>', 'ci</w>', 'ildə</w>', 'tər', 'ti', 'b</w>', 'et', 'diyi</w>', 'tur', 'an</w>', 'x', 'ər']...
+  Decoded: f lenormanın 1895 ci ildə tərtib etdiyi turan xəritəsi v dünya tarixinin turan dövrü tarixi xülasələ...
+
+Top 10 Merges:
+  1. 'n' + '</w>' -> 'n</w>'
+  2. 'i' + '</w>' -> 'i</w>'
+  3. 'ə' + '</w>' -> 'ə</w>'
+  4. 'a' + 'r' -> 'ar'
+  5. 'a' + '</w>' -> 'a</w>'
+  6. 'ə' + 'r' -> 'ər'
+  7. 'i' + 'n' -> 'in'
+  8. 'i' + 'l' -> 'il'
+  9. 'r' + '</w>' -> 'r</w>'
+  10. 'a' + 'l' -> 'al'
