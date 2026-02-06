@@ -1,0 +1,28 @@
+
+=== SENTENCE SEGMENTATION REPORT ===
+
+Statistics:
+  Total sentences: 11
+  Average sentence length: 5.36 words
+
+Sample Sentences:
+
+1. Azərbaycan Respublikası Cənubi Qafqazda yerləşir.
+
+2. Ölkənin paytaxtı Bakı şəhəridir.
+
+3. Azərbaycan dili türk dillər ailəsinə aiddir.
+
+4. Bu dil milyonlarla insan tərəfindən danışılır.
+
+5. Azərbaycan xalqı qonaqpərvərliyi ilə məşhurdur.
+
+6. Milli mətbəx çox zəngindir.
+
+7. Plov, dolma, qutab ən məşhur milli yeməklərdir.
+
+8. Çay içmək mədəniyyətin bir hissəsidir.
+
+9. Xəzər dənizi dünyanın ən böyük gölüdür.
+
+10. Azərbaycan sahilləri çox gözəldir.

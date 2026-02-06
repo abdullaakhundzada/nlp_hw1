@@ -1,0 +1,26 @@
+{
+  "vocabulary_size": 4,
+  "total_words": 60,
+  "top_20_words": {
+    "azərbaycan": 4,
+    "milli": 2,
+    "çox": 2,
+    "ən": 2,
+    "respublikası": 1,
+    "cənubi": 1,
+    "qafqazda": 1,
+    "yerləşir": 1,
+    "ölkənin": 1,
+    "paytaxtı": 1,
+    "bakı": 1,
+    "şəhəridir": 1,
+    "dili": 1,
+    "türk": 1,
+    "dillər": 1,
+    "ailəsinə": 1,
+    "aiddir": 1,
+    "bu": 1,
+    "dil": 1,
+    "milyonlarla": 1
+  }
+}

@@ -1,0 +1,24 @@
+
+=== BYTE PAIR ENCODING (BPE) REPORT ===
+
+Configuration:
+  Number of merges: 100
+  Vocabulary size: 94
+
+Sample Encoding/Decoding:
+  Original: Azərbaycan Respublikası Cənubi Qafqazda yerləşir. Ölkənin paytaxtı Bakı şəhəridir.
+Azərbaycan dili t...
+  Encoded tokens: ['azərbaycan</w>', 'respublikası</w>', 'cənubi</w>', 'qafqazda</w>', 'yerləşir</w>', 'ölkənin</w>', 'paytaxtı</w>', 'bakı</w>', 'şəhəridir</w>', 'azərbaycan</w>', 'dili</w>', 'türk</w>', 'dillər</w>', 'ailəsin', 'ə', '</w>', 'a', 'i', 'd', 'dir</w>']...
+  Decoded: azərbaycan respublikası cənubi qafqazda yerləşir ölkənin paytaxtı bakı şəhəridir azərbaycan dili tür...
+
+Top 10 Merges:
+  1. 'r' + '</w>' -> 'r</w>'
+  2. 'n' + '</w>' -> 'n</w>'
+  3. 'ə' + 'r' -> 'ər'
+  4. 'd' + 'i' -> 'di'
+  5. 'i' + '</w>' -> 'i</w>'
+  6. 'b' + 'a' -> 'ba'
+  7. 'di' + 'r</w>' -> 'dir</w>'
+  8. 'i' + 'l' -> 'il'
+  9. 'm' + 'ə' -> 'mə'
+  10. 'a' + 'z' -> 'az'

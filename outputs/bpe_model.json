@@ -1,0 +1,27 @@
+{
+  "num_merges": 100,
+  "vocabulary_size": 94,
+  "sample_merges": [
+    "r+</w>",
+    "n+</w>",
+    "ə+r",
+    "d+i",
+    "i+</w>",
+    "b+a",
+    "di+r</w>",
+    "i+l",
+    "m+ə",
+    "a+z",
+    "a+n</w>",
+    "ə+n",
+    "az+ər",
+    "azər+ba",
+    "azərba+y",
+    "azərbay+c",
+    "azərbayc+an</w>",
+    "ı+</w>",
+    "a+</w>",
+    "i+n"
+  ],
+  "total_merges": 100
+}

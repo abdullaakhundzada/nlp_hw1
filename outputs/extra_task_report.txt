@@ -1,0 +1,29 @@
+
+=== WEIGHTED SPELL CHECKER WITH CONFUSION MATRIX ===
+
+Model Configuration:
+  Vocabulary size: 4
+  Total errors learned: 9
+  Confusion pairs: 25
+
+Evaluation Results:
+  Test pairs: 3
+  Top-1 accuracy: 100.00%
+  Top-5 accuracy: 100.00%
+
+Top Character Confusions:
+  1. 'i' -> 'ı': 5 times
+  2. 'ı' -> 'i': 5 times
+  3. 'o' -> 'ö': 4 times
+  4. 'ö' -> 'o': 4 times
+  5. 'u' -> 'ü': 4 times
+  6. 'ü' -> 'u': 4 times
+  7. 's' -> 'ş': 4 times
+  8. 'ş' -> 's': 4 times
+  9. 'c' -> 'ç': 4 times
+  10. 'ç' -> 'c': 4 times
+  11. 'a' -> 'ə': 3 times
+  12. 'ə' -> 'a': 3 times
+  13. 'g' -> 'ğ': 3 times
+  14. 'ğ' -> 'g': 3 times
+  15. 'a' -> 's': 2 times

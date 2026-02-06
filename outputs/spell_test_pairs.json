@@ -1,0 +1,23 @@
+{
+  "test_pairs": [
+    [
+      "eox",
+      "çox"
+    ],
+    [
+      "azərbayacn",
+      "azərbaycan"
+    ],
+    [
+      "miili",
+      "milli"
+    ]
+  ],
+  "evaluation": {
+    "total": 3,
+    "correct_top1": 3,
+    "correct_top5": 3,
+    "accuracy_top1": 1.0,
+    "accuracy_top5": 1.0
+  }
+}

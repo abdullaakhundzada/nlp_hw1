@@ -1,0 +1,26 @@
+
+=== HEAPS' LAW ANALYSIS ===
+
+Heaps' Law Formula: V(n) = k * n^β
+
+Parameters Found:
+  k (constant):     1.0795
+  β (beta):         0.9549
+  R² (goodness):    0.9991
+
+Interpretation:
+- k represents the vocabulary richness
+- β represents the rate of vocabulary growth (typically 0.4-0.6 for natural language)
+- β = 0.9549 indicates atypical vocabulary growth
+
+Data Points:
+  Total tokens analyzed:     60
+  Final vocabulary size:     54
+  Sample points:             60
+
+Predicted vs Actual (last 5 points):
+  n=      56: Actual=    50, Predicted=    50.4, Error=   0.4
+  n=      57: Actual=    51, Predicted=    51.3, Error=   0.3
+  n=      58: Actual=    52, Predicted=    52.1, Error=   0.1
+  n=      59: Actual=    53, Predicted=    53.0, Error=   0.0
+  n=      60: Actual=    54, Predicted=    53.8, Error=   0.2

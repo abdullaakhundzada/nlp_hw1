@@ -1,0 +1,22 @@
+
+=== SPELL CHECKER REPORT ===
+
+Vocabulary Statistics:
+  Vocabulary size: 4
+  Total words in corpus: 60
+
+Evaluation Results:
+  Test pairs: 3
+  Top-1 accuracy: 100.00%
+  Top-5 accuracy: 100.00%
+
+Sample Test Cases:
+
+1. Misspelled: 'eox' | Correct: 'çox'
+   Suggestions: ['çox']
+
+2. Misspelled: 'azərbayacn' | Correct: 'azərbaycan'
+   Suggestions: ['azərbaycan']
+
+3. Misspelled: 'miili' | Correct: 'milli'
+   Suggestions: ['milli']
