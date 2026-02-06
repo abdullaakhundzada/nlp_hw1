@@ -1,0 +1,408 @@
+"""
+Spell Checker Evaluation Script
+Tests pretrained spell checker on a test dataset
+"""
+import json
+import os
+import argparse
+from typing import Dict, List, Tuple
+import re
+from collections import defaultdict
+
+# Import spell checker modules
+from src.spell_checking import SpellChecker
+from src.extra_weighted import WeightedSpellChecker
+
+
+class SpellCheckerEvaluator:
+    def __init__(self, spell_checker, test_data_path: str):
+        """
+        Initialize evaluator
+        
+        Args:
+            spell_checker: Loaded spell checker (regular or weighted)
+            test_data_path: Path to test JSON file
+        """
+        self.spell_checker = spell_checker
+        self.test_data_path = test_data_path
+        self.test_cases = []
+        self.results = []
+        
+    def load_test_data(self):
+        """Load test cases from JSON file"""
+        with open(self.test_data_path, 'r', encoding='utf-8') as f:
+            data = json.load(f)
+        
+        self.test_cases = data.get('test_cases', [])
+        print(f"Loaded {len(self.test_cases)} test cases")
+        
+        return self.test_cases
+    
+    def tokenize(self, text: str) -> List[str]:
+        """Tokenize text into words"""
+        # Same tokenization as in task1
+        tokens = re.findall(r'\b[\wəıöüğşç]+\b', text.lower())
+        return tokens
+    
+    def evaluate_single_case(self, test_case: Dict, max_distance: float = 2) -> Dict:
+        """
+        Evaluate a single test case
+        
+        Args:
+            test_case: Dictionary with 'correct' and 'typo' keys
+            max_distance: Maximum edit distance for corrections
+            
+        Returns:
+            Dictionary with evaluation results
+        """
+        correct_text = test_case['correct']
+        typo_text = test_case['typo']
+        test_id = test_case.get('id', 'unknown')
+        
+        # Tokenize both texts
+        correct_tokens = self.tokenize(correct_text)
+        typo_tokens = self.tokenize(typo_text)
+        
+        # Track corrections
+        corrections = []
+        word_corrections = {
+            'total_words': len(typo_tokens),
+            'corrected': 0,
+            'correct_corrections': 0,
+            'incorrect_corrections': 0,
+            'unchanged': 0
+        }
+        
+        # Create mapping of correct tokens by position (if same length)
+        if len(correct_tokens) == len(typo_tokens):
+            aligned = True
+            correct_map = {i: correct_tokens[i] for i in range(len(correct_tokens))}
+        else:
+            aligned = False
+            correct_map = {}
+        
+        # Evaluate each typo word
+        for i, typo_word in enumerate(typo_tokens):
+            # Get correction from spell checker
+            if isinstance(self.spell_checker, WeightedSpellChecker):
+                suggestions = self.spell_checker.correct_word(typo_word, max_distance=max_distance, top_n=1)
+            else:
+                suggestions = self.spell_checker.correct_word(typo_word, max_distance=int(max_distance), top_n=1)
+            
+            if suggestions:
+                corrected_word = suggestions[0][0]
+                distance = suggestions[0][1]
+                
+                # Check if correction is correct (if aligned)
+                if aligned and i in correct_map:
+                    expected = correct_map[i]
+                    is_correct = (corrected_word == expected)
+                    
+                    if corrected_word != typo_word:
+                        word_corrections['corrected'] += 1
+                        if is_correct:
+                            word_corrections['correct_corrections'] += 1
+                        else:
+                            word_corrections['incorrect_corrections'] += 1
+                    else:
+                        word_corrections['unchanged'] += 1
+                    
+                    corrections.append({
+                        'position': i,
+                        'typo': typo_word,
+                        'corrected': corrected_word,
+                        'expected': expected,
+                        'is_correct': is_correct,
+                        'distance': distance
+                    })
+                else:
+                    # Can't verify without alignment
+                    corrections.append({
+                        'position': i,
+                        'typo': typo_word,
+                        'corrected': corrected_word,
+                        'distance': distance
+                    })
+            else:
+                # No suggestion found
+                corrections.append({
+                    'position': i,
+                    'typo': typo_word,
+                    'corrected': typo_word,
+                    'distance': 999
+                })
+                word_corrections['unchanged'] += 1
+        
+        # Reconstruct corrected text
+        corrected_text = ' '.join([c['corrected'] for c in corrections])
+        
+        # Calculate metrics
+        result = {
+            'id': test_id,
+            'original': typo_text,
+            'corrected': corrected_text,
+            'expected': correct_text,
+            'aligned': aligned,
+            'word_corrections': word_corrections,
+            'corrections': corrections
+        }
+        
+        # Calculate accuracy (if aligned)
+        if aligned and word_corrections['corrected'] > 0:
+            result['accuracy'] = word_corrections['correct_corrections'] / word_corrections['corrected']
+        else:
+            result['accuracy'] = None
+        
+        return result
+    
+    def evaluate_all(self, max_distance: float = 2) -> Dict:
+        """
+        Evaluate all test cases
+        
+        Args:
+            max_distance: Maximum edit distance
+            
+        Returns:
+            Dictionary with overall statistics
+        """
+        if not self.test_cases:
+            self.load_test_data()
+        
+        self.results = []
+        overall_stats = {
+            'total_cases': len(self.test_cases),
+            'total_words': 0,
+            'corrected_words': 0,
+            'correct_corrections': 0,
+            'incorrect_corrections': 0,
+            'unchanged_words': 0,
+            'aligned_cases': 0
+        }
+        
+        print(f"\nEvaluating {len(self.test_cases)} test cases...")
+        print("=" * 80)
+        
+        for i, test_case in enumerate(self.test_cases, 1):
+            result = self.evaluate_single_case(test_case, max_distance)
+            self.results.append(result)
+            
+            # Update overall stats
+            wc = result['word_corrections']
+            overall_stats['total_words'] += wc['total_words']
+            overall_stats['corrected_words'] += wc['corrected']
+            overall_stats['correct_corrections'] += wc['correct_corrections']
+            overall_stats['incorrect_corrections'] += wc['incorrect_corrections']
+            overall_stats['unchanged_words'] += wc['unchanged']
+            
+            if result['aligned']:
+                overall_stats['aligned_cases'] += 1
+            
+            # Print progress
+            if i % 10 == 0 or i == len(self.test_cases):
+                print(f"Processed {i}/{len(self.test_cases)} cases...")
+        
+        # Calculate overall accuracy
+        if overall_stats['corrected_words'] > 0:
+            overall_stats['accuracy'] = overall_stats['correct_corrections'] / overall_stats['corrected_words']
+        else:
+            overall_stats['accuracy'] = 0.0
+        
+        # Calculate precision and recall
+        if overall_stats['corrected_words'] > 0:
+            overall_stats['precision'] = overall_stats['correct_corrections'] / overall_stats['corrected_words']
+        else:
+            overall_stats['precision'] = 0.0
+        
+        total_errors = sum(1 for r in self.results for c in r['corrections'] if c.get('typo') != c.get('expected'))
+        if total_errors > 0:
+            overall_stats['recall'] = overall_stats['correct_corrections'] / total_errors
+        else:
+            overall_stats['recall'] = 0.0
+        
+        # F1 score
+        if overall_stats['precision'] + overall_stats['recall'] > 0:
+            overall_stats['f1_score'] = 2 * (overall_stats['precision'] * overall_stats['recall']) / (overall_stats['precision'] + overall_stats['recall'])
+        else:
+            overall_stats['f1_score'] = 0.0
+        
+        return overall_stats
+    
+    def print_results(self, overall_stats: Dict, show_details: bool = True, num_examples: int = 5):
+        """
+        Print evaluation results
+        
+        Args:
+            overall_stats: Overall statistics dictionary
+            show_details: Whether to show detailed examples
+            num_examples: Number of examples to show
+        """
+        print("\n" + "=" * 80)
+        print("SPELL CHECKER EVALUATION RESULTS")
+        print("=" * 80)
+        
+        print(f"\nOverall Statistics:")
+        print(f"  Total test cases: {overall_stats['total_cases']}")
+        print(f"  Aligned cases: {overall_stats['aligned_cases']}")
+        print(f"  Total words: {overall_stats['total_words']}")
+        print(f"  Words corrected: {overall_stats['corrected_words']}")
+        print(f"  Correct corrections: {overall_stats['correct_corrections']}")
+        print(f"  Incorrect corrections: {overall_stats['incorrect_corrections']}")
+        print(f"  Unchanged words: {overall_stats['unchanged_words']}")
+        
+        print(f"\nPerformance Metrics:")
+        print(f"  Accuracy: {overall_stats['accuracy']:.2%}")
+        print(f"  Precision: {overall_stats['precision']:.2%}")
+        print(f"  Recall: {overall_stats['recall']:.2%}")
+        print(f"  F1 Score: {overall_stats['f1_score']:.4f}")
+        
+        if show_details and self.results:
+            print(f"\n" + "=" * 80)
+            print(f"SAMPLE RESULTS (showing {min(num_examples, len(self.results))} examples)")
+            print("=" * 80)
+            
+            for i, result in enumerate(self.results[:num_examples], 1):
+                print(f"\nTest Case #{result['id']}:")
+                print(f"  Typo:      {result['original']}")
+                print(f"  Corrected: {result['corrected']}")
+                print(f"  Expected:  {result['expected']}")
+                
+                if result['aligned'] and result['accuracy'] is not None:
+                    print(f"  Accuracy:  {result['accuracy']:.2%}")
+                
+                # Show word-level details
+                if result['corrections']:
+                    print(f"  Word corrections:")
+                    for corr in result['corrections'][:10]:  # Show first 10 words
+                        if 'expected' in corr:
+                            status = "✓" if corr.get('is_correct') else "✗"
+                            print(f"    {status} '{corr['typo']}' → '{corr['corrected']}' (expected: '{corr['expected']}')")
+                        else:
+                            print(f"    '{corr['typo']}' → '{corr['corrected']}'")
+    
+    def save_results(self, output_path: str, overall_stats: Dict):
+        """
+        Save results to JSON file
+        
+        Args:
+            output_path: Path to save results
+            overall_stats: Overall statistics
+        """
+        output_data = {
+            'overall_statistics': overall_stats,
+            'test_results': self.results
+        }
+        
+        with open(output_path, 'w', encoding='utf-8') as f:
+            json.dump(output_data, f, ensure_ascii=False, indent=2)
+        
+        print(f"\nResults saved to: {output_path}")
+    
+    def generate_report(self, output_path: str, overall_stats: Dict):
+        """
+        Generate detailed text report
+        
+        Args:
+            output_path: Path to save report
+            overall_stats: Overall statistics
+        """
+        with open(output_path, 'w', encoding='utf-8') as f:
+            f.write("=" * 80 + "\n")
+            f.write("SPELL CHECKER EVALUATION REPORT\n")
+            f.write("=" * 80 + "\n\n")
+            
+            f.write("Overall Statistics:\n")
+            f.write(f"  Total test cases: {overall_stats['total_cases']}\n")
+            f.write(f"  Aligned cases: {overall_stats['aligned_cases']}\n")
+            f.write(f"  Total words: {overall_stats['total_words']}\n")
+            f.write(f"  Words corrected: {overall_stats['corrected_words']}\n")
+            f.write(f"  Correct corrections: {overall_stats['correct_corrections']}\n")
+            f.write(f"  Incorrect corrections: {overall_stats['incorrect_corrections']}\n")
+            f.write(f"  Unchanged words: {overall_stats['unchanged_words']}\n\n")
+            
+            f.write("Performance Metrics:\n")
+            f.write(f"  Accuracy: {overall_stats['accuracy']:.2%}\n")
+            f.write(f"  Precision: {overall_stats['precision']:.2%}\n")
+            f.write(f"  Recall: {overall_stats['recall']:.2%}\n")
+            f.write(f"  F1 Score: {overall_stats['f1_score']:.4f}\n\n")
+            
+            f.write("=" * 80 + "\n")
+            f.write("DETAILED RESULTS\n")
+            f.write("=" * 80 + "\n\n")
+            
+            for result in self.results:
+                f.write(f"Test Case #{result['id']}:\n")
+                f.write(f"  Typo:      {result['original']}\n")
+                f.write(f"  Corrected: {result['corrected']}\n")
+                f.write(f"  Expected:  {result['expected']}\n")
+                
+                if result['aligned'] and result['accuracy'] is not None:
+                    f.write(f"  Accuracy:  {result['accuracy']:.2%}\n")
+                
+                f.write("\n")
+        
+        print(f"Report saved to: {output_path}")
+
+
+def main():
+    """Main function"""
+    parser = argparse.ArgumentParser(description='Test spell checker on test dataset')
+    parser.add_argument('--test-data', type=str, required=True,
+                       help='Path to test JSON file')
+    parser.add_argument('--model', type=str, default='./outputs/spell_checker.pkl',
+                       help='Path to spell checker model (default: ./outputs/spell_checker.pkl)')
+    parser.add_argument('--weighted', action='store_true',
+                       help='Use weighted spell checker instead of regular')
+    parser.add_argument('--max-distance', type=float, default=2.0,
+                       help='Maximum edit distance (default: 2.0)')
+    parser.add_argument('--output', type=str, default='./test_results',
+                       help='Output directory for results (default: ./test_results)')
+    parser.add_argument('--examples', type=int, default=10,
+                       help='Number of examples to show (default: 10)')
+    
+    args = parser.parse_args()
+    
+    # Create output directory
+    os.makedirs(args.output, exist_ok=True)
+    
+    # Load spell checker
+    print(f"Loading spell checker from: {args.model}")
+    
+    if args.weighted:
+        spell_checker = WeightedSpellChecker()
+        spell_checker.load_model(args.model)
+        checker_type = "Weighted"
+    else:
+        spell_checker = SpellChecker()
+        spell_checker.load_model(args.model)
+        checker_type = "Regular"
+    
+    print(f"Loaded {checker_type} spell checker")
+    print(f"Vocabulary size: {len(spell_checker.vocabulary):,}")
+    
+    # Create evaluator
+    evaluator = SpellCheckerEvaluator(spell_checker, args.test_data)
+    
+    # Evaluate
+    overall_stats = evaluator.evaluate_all(max_distance=args.max_distance)
+    
+    # Print results
+    evaluator.print_results(overall_stats, show_details=True, num_examples=args.examples)
+    
+    # Save results
+    results_json = os.path.join(args.output, 'evaluation_results.json')
+    evaluator.save_results(results_json, overall_stats)
+    
+    # Generate report
+    report_txt = os.path.join(args.output, 'evaluation_report.txt')
+    evaluator.generate_report(report_txt, overall_stats)
+    
+    print("\n" + "=" * 80)
+    print("EVALUATION COMPLETE")
+    print("=" * 80)
+    print(f"Results directory: {args.output}")
+    print(f"  - evaluation_results.json (detailed JSON)")
+    print(f"  - evaluation_report.txt (text report)")
+
+
+if __name__ == "__main__":
+    main()

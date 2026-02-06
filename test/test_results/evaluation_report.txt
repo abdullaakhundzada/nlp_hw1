@@ -1,0 +1,293 @@
+================================================================================
+SPELL CHECKER EVALUATION REPORT
+================================================================================
+
+Overall Statistics:
+  Total test cases: 50
+  Aligned cases: 48
+  Total words: 231
+  Words corrected: 25
+  Correct corrections: 10
+  Incorrect corrections: 15
+  Unchanged words: 206
+
+Performance Metrics:
+  Accuracy: 40.00%
+  Precision: 40.00%
+  Recall: 4.50%
+  F1 Score: 0.0810
+
+================================================================================
+DETAILED RESULTS
+================================================================================
+
+Test Case #1:
+  Typo:      Sizinle tanis olduguma cox sadam.
+  Corrected: sizinle tanis olduguma çox sadam
+  Expected:  Sizinlə tanış olduğuma çox şadam.
+  Accuracy:  100.00%
+
+Test Case #2:
+  Typo:      Zehmet olmasa, mene komek ederdiniz?
+  Corrected: zehmet olmasa mene komek ederdiniz
+  Expected:  Zəhmət olmasa, mənə kömək edərdiniz?
+
+Test Case #3:
+  Typo:      Bu gun hava olduqca guneslidir.
+  Corrected: ən ən hava olduqca guneslidir
+  Expected:  Bu gün hava olduqca günəşlidir.
+  Accuracy:  0.00%
+
+Test Case #4:
+  Typo:      Azerbaycanin paytaxti Baki seheridir.
+  Corrected: azerbaycanin paytaxti baki seheridir
+  Expected:  Azərbaycanın paytaxtı Bakı şəhəridir.
+
+Test Case #5:
+  Typo:      Yeni isinde sene ugurlar arzulayiram.
+  Corrected: yeni isinde sene ugurlar arzulayiram
+  Expected:  Yeni işində sənə uğurlar arzulayıram.
+
+Test Case #6:
+  Typo:      Men her seher idmanla mesgul oluram.
+  Corrected: ən her seher idmanla mesgul oluram
+  Expected:  Mən hər səhər idmanla məşğul oluram.
+  Accuracy:  0.00%
+
+Test Case #7:
+  Typo:      Axsam saat altida goruserik.
+  Corrected: axsam saat altida goruserik
+  Expected:  Axşam saat altıda görüşərik.
+
+Test Case #8:
+  Typo:      Kitab oxumaq insanin dunyagorusunu artirir.
+  Corrected: kitab oxumaq insanin dunyagorusunu artirir
+  Expected:  Kitab oxumaq insanın dünyagörüşünü artırır.
+
+Test Case #9:
+  Typo:      Siz hansi unversitetde tehsil alirsiniz?
+  Corrected: siz hansi unversitetde tehsil alirsiniz
+  Expected:  Siz hansı universitetdə təhsil alırsınız?
+
+Test Case #10:
+  Typo:      Menim en sevdiyim reng yasildir.
+  Corrected: menim ən sevdiyim reng yasildir
+  Expected:  Mənim ən sevdiyim rəng yaşıldır.
+  Accuracy:  100.00%
+
+Test Case #11:
+  Typo:      Yol hereketi qaydalarna riayet etmek lazimdir.
+  Corrected: çox hereketi qaydalarna riayet etmek lazimdir
+  Expected:  Yol hərəkəti qaydalarına riayət etmək lazımdır.
+  Accuracy:  0.00%
+
+Test Case #12:
+  Typo:      Biz dunen maraqli bir filme baxdiq.
+  Corrected: biz dunen maraqli bir filme baxdiq
+  Expected:  Biz dünən maraqlı bir filmə baxdıq.
+
+Test Case #13:
+  Typo:      Tebieti qorumaq her birimizin borcudu.
+  Corrected: tebieti qorumaq her birimizin borcudu
+  Expected:  Təbiəti qorumaq hər birimizin borcudur.
+
+Test Case #14:
+  Typo:      Gelecekde muhendis olmaq isteyirem.
+  Corrected: gelecekde muhendis olmaq isteyirem
+  Expected:  Gələcəkdə mühəndis olmaq istəyirəm.
+
+Test Case #15:
+  Typo:      Sabah erkenden yola dusmeliyik.
+  Corrected: sabah erkenden yola dusmeliyik
+  Expected:  Sabah erkəndən yola düşməliyik.
+
+Test Case #16:
+  Typo:      Onun dediyi sozler mene cox toxundu.
+  Corrected: onun dediyi sozler mene çox toxundu
+  Expected:  Onun dediyi sözlər mənə çox toxundu.
+  Accuracy:  100.00%
+
+Test Case #17:
+  Typo:      Sehifeni yenileyin ve yeninden cehd edin.
+  Corrected: sehifeni yenileyin ən yeninden cehd edin
+  Expected:  Səhifəni yeniləyin və yenidən cəhd edin.
+  Accuracy:  0.00%
+
+Test Case #18:
+  Typo:      Bu mesele haqqinda dusunmek lazimdir.
+  Corrected: ən mesele haqqinda dusunmek lazimdir
+  Expected:  Bu məsələ haqqında düşünmək lazımdır.
+  Accuracy:  0.00%
+
+Test Case #19:
+  Typo:      Mekteb ileri en gozel xatirelerdir.
+  Corrected: mekteb ileri ən gozel xatirelerdir
+  Expected:  Məktəb illəri ən gözəl xatirələrdir.
+  Accuracy:  100.00%
+
+Test Case #20:
+  Typo:      Zefer gunu xalqimiz ucun cox onemlidir.
+  Corrected: zefer gunu xalqimiz ucun çox onemlidir
+  Expected:  Zəfər günü xalqımız üçün çox önəmlidir.
+  Accuracy:  100.00%
+
+Test Case #21:
+  Typo:      Komputer proqramlarin oyrenmek asan deyil.
+  Corrected: komputer proqramlarin oyrenmek asan deyil
+  Expected:  Kompüter proqramlarını öyrənmək asan deyil.
+
+Test Case #22:
+  Typo:      Biz birlikde daha gucluyuk.
+  Corrected: biz birlikde daha gucluyuk
+  Expected:  Biz birlikdə daha güclüyük.
+
+Test Case #23:
+  Typo:      Bu binanin memarligi cox mohtesemdir.
+  Corrected: ən binanin memarligi çox mohtesemdir
+  Expected:  Bu binanın memarlığı çox möhtəşəmdir.
+  Accuracy:  50.00%
+
+Test Case #24:
+  Typo:      Sizin teklifiniz bizim ucun maraqlidir.
+  Corrected: sizin teklifiniz bizim ucun maraqlidir
+  Expected:  Sizin təklifiniz bizim üçün maraqlıdır.
+
+Test Case #25:
+  Typo:      Dosluq en boyuk servetdir.
+  Corrected: dosluq ən boyuk servetdir
+  Expected:  Dostluq ən böyük sərvətdir.
+  Accuracy:  100.00%
+
+Test Case #26:
+  Typo:      Masini ehtiyatla surmek lazimdir.
+  Corrected: masini ehtiyatla surmek lazimdir
+  Expected:  Maşını ehtiyatla sürmək lazımdır.
+
+Test Case #27:
+  Typo:      O, her zaman vaxtinda gelir.
+  Corrected: ən her zaman vaxtinda gelir
+  Expected:  O, hər zaman vaxtında gəlir.
+  Accuracy:  0.00%
+
+Test Case #28:
+  Typo:      Islerinizde muveffeqiyetler arzulayiram.
+  Corrected: islerinizde muveffeqiyetler arzulayiram
+  Expected:  İşlərinizdə müvəffəqiyyətlər arzulayıram.
+
+Test Case #29:
+  Typo:      Usaqlar parkda senlik edirler.
+  Corrected: usaqlar parkda senlik edirler
+  Expected:  Uşaqlar parkda şənlik edirlər.
+
+Test Case #30:
+  Typo:      Bu gun cox yorulmusam.
+  Corrected: ən ən çox yorulmusam
+  Expected:  Bu gün çox yorulmuşam.
+  Accuracy:  33.33%
+
+Test Case #31:
+  Typo:      Heyat suprizlerle doludur.
+  Corrected: heyat suprizlerle doludur
+  Expected:  Həyat sürprizlərlə doludur.
+
+Test Case #32:
+  Typo:      Yemek heqiqeten cox lezzetlidir.
+  Corrected: yemek heqiqeten çox lezzetlidir
+  Expected:  Yemək həqiqətən çox ləzzətlidir.
+  Accuracy:  100.00%
+
+Test Case #33:
+  Typo:      Televizorda maraqli verilish var.
+  Corrected: televizorda maraqli verilish var
+  Expected:  Televizorda maraqlı veriliş var.
+
+Test Case #34:
+  Typo:      Musiqi dinlemek meni sakitleshdirir.
+  Corrected: musiqi dinlemek meni sakitleshdirir
+  Expected:  Musiqi dinləmək məni sakitləşdirir.
+
+Test Case #35:
+  Typo:      Gozlerim bir az yorulub.
+  Corrected: gozlerim bir ən yorulub
+  Expected:  Gözlərim bir az yorulub.
+  Accuracy:  0.00%
+
+Test Case #36:
+  Typo:      Otagi seliqeye salmaq vaxtidir.
+  Corrected: otagi seliqeye salmaq vaxtidir
+  Expected:  Otağı səliqəyə salmaq vaxtıdır.
+
+Test Case #37:
+  Typo:      Yeni ile az qalib.
+  Corrected: yeni ile ən qalib
+  Expected:  Yeni ilə az qalıb.
+  Accuracy:  0.00%
+
+Test Case #38:
+  Typo:      Menim sualima cavab vermediniz.
+  Corrected: menim sualima cavab vermediniz
+  Expected:  Mənim sualıma cavab vermədiniz.
+
+Test Case #39:
+  Typo:      Kucede guclu kulek esir.
+  Corrected: kucede guclu kulek esir
+  Expected:  Küçədə güclü külək əsir.
+
+Test Case #40:
+  Typo:      Senin fikrin menim ucun onemlidir.
+  Corrected: senin fikrin menim ucun onemlidir
+  Expected:  Sənin fikrin mənim üçün önəmlidir.
+
+Test Case #41:
+  Typo:      Imtahan neticeleri sabah elan olunacaq.
+  Corrected: imtahan neticeleri sabah elan olunacaq
+  Expected:  İmtahan nəticələri sabah elan olunacaq.
+
+Test Case #42:
+  Typo:      Qapini baglamagi unutmayin.
+  Corrected: qapini baglamagi unutmayin
+  Expected:  Qapını bağlamağı unutmayın.
+
+Test Case #43:
+  Typo:      Deniz kenarinda gezmeyi sevirem.
+  Corrected: deniz kenarinda gezmeyi sevirem
+  Expected:  Dəniz kənarında gəzməyi sevirəm.
+
+Test Case #44:
+  Typo:      Her kes oz isi ile mesgul olsun.
+  Corrected: her kes ən isi ile mesgul olsun
+  Expected:  Hər kəs öz işi ilə məşğul olsun.
+  Accuracy:  0.00%
+
+Test Case #45:
+  Typo:      Kitabin uz qabigi cox celbedicidir.
+  Corrected: kitabin ən qabigi çox celbedicidir
+  Expected:  Kitabın üz qabığı çox cəlbedicidir.
+  Accuracy:  50.00%
+
+Test Case #46:
+  Typo:      Size bir sual vere bilerem?
+  Corrected: size bir sual vere bilerem
+  Expected:  Sizə bir sual verə bilərəm?
+
+Test Case #47:
+  Typo:      Baki kulekler seheridir.
+  Corrected: baki kulekler seheridir
+  Expected:  Bakı küləklər şəhəridir.
+
+Test Case #48:
+  Typo:      Bu qerari vermek asan olmadi.
+  Corrected: ən qerari vermek asan olmadi
+  Expected:  Bu qərarı vermək asan olmadı.
+  Accuracy:  0.00%
+
+Test Case #49:
+  Typo:      Onun gelishi hamini sevindirdi.
+  Corrected: onun gelishi hamini sevindirdi
+  Expected:  Onun gəlişi hamını sevindirdi.
+
+Test Case #50:
+  Typo:      Biz her zaman sizin yaninizdayiq.
+  Corrected: biz her zaman sizin yaninizdayiq
+  Expected:  Biz hər zaman sizin yanınızdayıq.
+

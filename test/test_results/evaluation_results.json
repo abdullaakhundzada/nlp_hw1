@@ -1,0 +1,2303 @@
+{
+  "overall_statistics": {
+    "total_cases": 50,
+    "total_words": 231,
+    "corrected_words": 25,
+    "correct_corrections": 10,
+    "incorrect_corrections": 15,
+    "unchanged_words": 206,
+    "aligned_cases": 48,
+    "accuracy": 0.4,
+    "precision": 0.4,
+    "recall": 0.04504504504504504,
+    "f1_score": 0.08097165991902834
+  },
+  "test_results": [
+    {
+      "id": 1,
+      "original": "Sizinle tanis olduguma cox sadam.",
+      "corrected": "sizinle tanis olduguma çox sadam",
+      "expected": "Sizinlə tanış olduğuma çox şadam.",
+      "aligned": true,
+      "word_corrections": {
+        "total_words": 5,
+        "corrected": 1,
+        "correct_corrections": 1,
+        "incorrect_corrections": 0,
+        "unchanged": 4
+      },
+      "corrections": [
+        {
+          "position": 0,
+          "typo": "sizinle",
+          "corrected": "sizinle",
+          "distance": 999
+        },
+        {
+          "position": 1,
+          "typo": "tanis",
+          "corrected": "tanis",
+          "distance": 999
+        },
+        {
+          "position": 2,
+          "typo": "olduguma",
+          "corrected": "olduguma",
+          "distance": 999
+        },
+        {
+          "position": 3,
+          "typo": "cox",
+          "corrected": "çox",
+          "expected": "çox",
+          "is_correct": true,
+          "distance": 0.2
+        },
+        {
+          "position": 4,
+          "typo": "sadam",
+          "corrected": "sadam",
+          "distance": 999
+        }
+      ],
+      "accuracy": 1.0
+    },
+    {
+      "id": 2,
+      "original": "Zehmet olmasa, mene komek ederdiniz?",
+      "corrected": "zehmet olmasa mene komek ederdiniz",
+      "expected": "Zəhmət olmasa, mənə kömək edərdiniz?",
+      "aligned": true,
+      "word_corrections": {
+        "total_words": 5,
+        "corrected": 0,
+        "correct_corrections": 0,
+        "incorrect_corrections": 0,
+        "unchanged": 5
+      },
+      "corrections": [
+        {
+          "position": 0,
+          "typo": "zehmet",
+          "corrected": "zehmet",
+          "distance": 999
+        },
+        {
+          "position": 1,
+          "typo": "olmasa",
+          "corrected": "olmasa",
+          "distance": 999
+        },
+        {
+          "position": 2,
+          "typo": "mene",
+          "corrected": "mene",
+          "distance": 999
+        },
+        {
+          "position": 3,
+          "typo": "komek",
+          "corrected": "komek",
+          "distance": 999
+        },
+        {
+          "position": 4,
+          "typo": "ederdiniz",
+          "corrected": "ederdiniz",
+          "distance": 999
+        }
+      ],
+      "accuracy": null
+    },
+    {
+      "id": 3,
+      "original": "Bu gun hava olduqca guneslidir.",
+      "corrected": "ən ən hava olduqca guneslidir",
+      "expected": "Bu gün hava olduqca günəşlidir.",
+      "aligned": true,
+      "word_corrections": {
+        "total_words": 5,
+        "corrected": 2,
+        "correct_corrections": 0,
+        "incorrect_corrections": 2,
+        "unchanged": 3
+      },
+      "corrections": [
+        {
+          "position": 0,
+          "typo": "bu",
+          "corrected": "ən",
+          "expected": "bu",
+          "is_correct": false,
+          "distance": 2.0
+        },
+        {
+          "position": 1,
+          "typo": "gun",
+          "corrected": "ən",
+          "expected": "gün",
+          "is_correct": false,
+          "distance": 2.0
+        },
+        {
+          "position": 2,
+          "typo": "hava",
+          "corrected": "hava",
+          "distance": 999
+        },
+        {
+          "position": 3,
+          "typo": "olduqca",
+          "corrected": "olduqca",
+          "distance": 999
+        },
+        {
+          "position": 4,
+          "typo": "guneslidir",
+          "corrected": "guneslidir",
+          "distance": 999
+        }
+      ],
+      "accuracy": 0.0
+    },
+    {
+      "id": 4,
+      "original": "Azerbaycanin paytaxti Baki seheridir.",
+      "corrected": "azerbaycanin paytaxti baki seheridir",
+      "expected": "Azərbaycanın paytaxtı Bakı şəhəridir.",
+      "aligned": true,
+      "word_corrections": {
+        "total_words": 4,
+        "corrected": 0,
+        "correct_corrections": 0,
+        "incorrect_corrections": 0,
+        "unchanged": 4
+      },
+      "corrections": [
+        {
+          "position": 0,
+          "typo": "azerbaycanin",
+          "corrected": "azerbaycanin",
+          "distance": 999
+        },
+        {
+          "position": 1,
+          "typo": "paytaxti",
+          "corrected": "paytaxti",
+          "distance": 999
+        },
+        {
+          "position": 2,
+          "typo": "baki",
+          "corrected": "baki",
+          "distance": 999
+        },
+        {
+          "position": 3,
+          "typo": "seheridir",
+          "corrected": "seheridir",
+          "distance": 999
+        }
+      ],
+      "accuracy": null
+    },
+    {
+      "id": 5,
+      "original": "Yeni isinde sene ugurlar arzulayiram.",
+      "corrected": "yeni isinde sene ugurlar arzulayiram",
+      "expected": "Yeni işində sənə uğurlar arzulayıram.",
+      "aligned": true,
+      "word_corrections": {
+        "total_words": 5,
+        "corrected": 0,
+        "correct_corrections": 0,
+        "incorrect_corrections": 0,
+        "unchanged": 5
+      },
+      "corrections": [
+        {
+          "position": 0,
+          "typo": "yeni",
+          "corrected": "yeni",
+          "distance": 999
+        },
+        {
+          "position": 1,
+          "typo": "isinde",
+          "corrected": "isinde",
+          "distance": 999
+        },
+        {
+          "position": 2,
+          "typo": "sene",
+          "corrected": "sene",
+          "distance": 999
+        },
+        {
+          "position": 3,
+          "typo": "ugurlar",
+          "corrected": "ugurlar",
+          "distance": 999
+        },
+        {
+          "position": 4,
+          "typo": "arzulayiram",
+          "corrected": "arzulayiram",
+          "distance": 999
+        }
+      ],
+      "accuracy": null
+    },
+    {
+      "id": 6,
+      "original": "Men her seher idmanla mesgul oluram.",
+      "corrected": "ən her seher idmanla mesgul oluram",
+      "expected": "Mən hər səhər idmanla məşğul oluram.",
+      "aligned": true,
+      "word_corrections": {
+        "total_words": 6,
+        "corrected": 1,
+        "correct_corrections": 0,
+        "incorrect_corrections": 1,
+        "unchanged": 5
+      },
+      "corrections": [
+        {
+          "position": 0,
+          "typo": "men",
+          "corrected": "ən",
+          "expected": "mən",
+          "is_correct": false,
+          "distance": 2.0
+        },
+        {
+          "position": 1,
+          "typo": "her",
+          "corrected": "her",
+          "distance": 999
+        },
+        {
+          "position": 2,
+          "typo": "seher",
+          "corrected": "seher",
+          "distance": 999
+        },
+        {
+          "position": 3,
+          "typo": "idmanla",
+          "corrected": "idmanla",
+          "distance": 999
+        },
+        {
+          "position": 4,
+          "typo": "mesgul",
+          "corrected": "mesgul",
+          "distance": 999
+        },
+        {
+          "position": 5,
+          "typo": "oluram",
+          "corrected": "oluram",
+          "distance": 999
+        }
+      ],
+      "accuracy": 0.0
+    },
+    {
+      "id": 7,
+      "original": "Axsam saat altida goruserik.",
+      "corrected": "axsam saat altida goruserik",
+      "expected": "Axşam saat altıda görüşərik.",
+      "aligned": true,
+      "word_corrections": {
+        "total_words": 4,
+        "corrected": 0,
+        "correct_corrections": 0,
+        "incorrect_corrections": 0,
+        "unchanged": 4
+      },
+      "corrections": [
+        {
+          "position": 0,
+          "typo": "axsam",
+          "corrected": "axsam",
+          "distance": 999
+        },
+        {
+          "position": 1,
+          "typo": "saat",
+          "corrected": "saat",
+          "distance": 999
+        },
+        {
+          "position": 2,
+          "typo": "altida",
+          "corrected": "altida",
+          "distance": 999
+        },
+        {
+          "position": 3,
+          "typo": "goruserik",
+          "corrected": "goruserik",
+          "distance": 999
+        }
+      ],
+      "accuracy": null
+    },
+    {
+      "id": 8,
+      "original": "Kitab oxumaq insanin dunyagorusunu artirir.",
+      "corrected": "kitab oxumaq insanin dunyagorusunu artirir",
+      "expected": "Kitab oxumaq insanın dünyagörüşünü artırır.",
+      "aligned": true,
+      "word_corrections": {
+        "total_words": 5,
+        "corrected": 0,
+        "correct_corrections": 0,
+        "incorrect_corrections": 0,
+        "unchanged": 5
+      },
+      "corrections": [
+        {
+          "position": 0,
+          "typo": "kitab",
+          "corrected": "kitab",
+          "distance": 999
+        },
+        {
+          "position": 1,
+          "typo": "oxumaq",
+          "corrected": "oxumaq",
+          "distance": 999
+        },
+        {
+          "position": 2,
+          "typo": "insanin",
+          "corrected": "insanin",
+          "distance": 999
+        },
+        {
+          "position": 3,
+          "typo": "dunyagorusunu",
+          "corrected": "dunyagorusunu",
+          "distance": 999
+        },
+        {
+          "position": 4,
+          "typo": "artirir",
+          "corrected": "artirir",
+          "distance": 999
+        }
+      ],
+      "accuracy": null
+    },
+    {
+      "id": 9,
+      "original": "Siz hansi unversitetde tehsil alirsiniz?",
+      "corrected": "siz hansi unversitetde tehsil alirsiniz",
+      "expected": "Siz hansı universitetdə təhsil alırsınız?",
+      "aligned": true,
+      "word_corrections": {
+        "total_words": 5,
+        "corrected": 0,
+        "correct_corrections": 0,
+        "incorrect_corrections": 0,
+        "unchanged": 5
+      },
+      "corrections": [
+        {
+          "position": 0,
+          "typo": "siz",
+          "corrected": "siz",
+          "distance": 999
+        },
+        {
+          "position": 1,
+          "typo": "hansi",
+          "corrected": "hansi",
+          "distance": 999
+        },
+        {
+          "position": 2,
+          "typo": "unversitetde",
+          "corrected": "unversitetde",
+          "distance": 999
+        },
+        {
+          "position": 3,
+          "typo": "tehsil",
+          "corrected": "tehsil",
+          "distance": 999
+        },
+        {
+          "position": 4,
+          "typo": "alirsiniz",
+          "corrected": "alirsiniz",
+          "distance": 999
+        }
+      ],
+      "accuracy": null
+    },
+    {
+      "id": 10,
+      "original": "Menim en sevdiyim reng yasildir.",
+      "corrected": "menim ən sevdiyim reng yasildir",
+      "expected": "Mənim ən sevdiyim rəng yaşıldır.",
+      "aligned": true,
+      "word_corrections": {
+        "total_words": 5,
+        "corrected": 1,
+        "correct_corrections": 1,
+        "incorrect_corrections": 0,
+        "unchanged": 4
+      },
+      "corrections": [
+        {
+          "position": 0,
+          "typo": "menim",
+          "corrected": "menim",
+          "distance": 999
+        },
+        {
+          "position": 1,
+          "typo": "en",
+          "corrected": "ən",
+          "expected": "ən",
+          "is_correct": true,
+          "distance": 1.0
+        },
+        {
+          "position": 2,
+          "typo": "sevdiyim",
+          "corrected": "sevdiyim",
+          "distance": 999
+        },
+        {
+          "position": 3,
+          "typo": "reng",
+          "corrected": "reng",
+          "distance": 999
+        },
+        {
+          "position": 4,
+          "typo": "yasildir",
+          "corrected": "yasildir",
+          "distance": 999
+        }
+      ],
+      "accuracy": 1.0
+    },
+    {
+      "id": 11,
+      "original": "Yol hereketi qaydalarna riayet etmek lazimdir.",
+      "corrected": "çox hereketi qaydalarna riayet etmek lazimdir",
+      "expected": "Yol hərəkəti qaydalarına riayət etmək lazımdır.",
+      "aligned": true,
+      "word_corrections": {
+        "total_words": 6,
+        "corrected": 1,
+        "correct_corrections": 0,
+        "incorrect_corrections": 1,
+        "unchanged": 5
+      },
+      "corrections": [
+        {
+          "position": 0,
+          "typo": "yol",
+          "corrected": "çox",
+          "expected": "yol",
+          "is_correct": false,
+          "distance": 2.0
+        },
+        {
+          "position": 1,
+          "typo": "hereketi",
+          "corrected": "hereketi",
+          "distance": 999
+        },
+        {
+          "position": 2,
+          "typo": "qaydalarna",
+          "corrected": "qaydalarna",
+          "distance": 999
+        },
+        {
+          "position": 3,
+          "typo": "riayet",
+          "corrected": "riayet",
+          "distance": 999
+        },
+        {
+          "position": 4,
+          "typo": "etmek",
+          "corrected": "etmek",
+          "distance": 999
+        },
+        {
+          "position": 5,
+          "typo": "lazimdir",
+          "corrected": "lazimdir",
+          "distance": 999
+        }
+      ],
+      "accuracy": 0.0
+    },
+    {
+      "id": 12,
+      "original": "Biz dunen maraqli bir filme baxdiq.",
+      "corrected": "biz dunen maraqli bir filme baxdiq",
+      "expected": "Biz dünən maraqlı bir filmə baxdıq.",
+      "aligned": true,
+      "word_corrections": {
+        "total_words": 6,
+        "corrected": 0,
+        "correct_corrections": 0,
+        "incorrect_corrections": 0,
+        "unchanged": 6
+      },
+      "corrections": [
+        {
+          "position": 0,
+          "typo": "biz",
+          "corrected": "biz",
+          "distance": 999
+        },
+        {
+          "position": 1,
+          "typo": "dunen",
+          "corrected": "dunen",
+          "distance": 999
+        },
+        {
+          "position": 2,
+          "typo": "maraqli",
+          "corrected": "maraqli",
+          "distance": 999
+        },
+        {
+          "position": 3,
+          "typo": "bir",
+          "corrected": "bir",
+          "distance": 999
+        },
+        {
+          "position": 4,
+          "typo": "filme",
+          "corrected": "filme",
+          "distance": 999
+        },
+        {
+          "position": 5,
+          "typo": "baxdiq",
+          "corrected": "baxdiq",
+          "distance": 999
+        }
+      ],
+      "accuracy": null
+    },
+    {
+      "id": 13,
+      "original": "Tebieti qorumaq her birimizin borcudu.",
+      "corrected": "tebieti qorumaq her birimizin borcudu",
+      "expected": "Təbiəti qorumaq hər birimizin borcudur.",
+      "aligned": true,
+      "word_corrections": {
+        "total_words": 5,
+        "corrected": 0,
+        "correct_corrections": 0,
+        "incorrect_corrections": 0,
+        "unchanged": 5
+      },
+      "corrections": [
+        {
+          "position": 0,
+          "typo": "tebieti",
+          "corrected": "tebieti",
+          "distance": 999
+        },
+        {
+          "position": 1,
+          "typo": "qorumaq",
+          "corrected": "qorumaq",
+          "distance": 999
+        },
+        {
+          "position": 2,
+          "typo": "her",
+          "corrected": "her",
+          "distance": 999
+        },
+        {
+          "position": 3,
+          "typo": "birimizin",
+          "corrected": "birimizin",
+          "distance": 999
+        },
+        {
+          "position": 4,
+          "typo": "borcudu",
+          "corrected": "borcudu",
+          "distance": 999
+        }
+      ],
+      "accuracy": null
+    },
+    {
+      "id": 14,
+      "original": "Gelecekde muhendis olmaq isteyirem.",
+      "corrected": "gelecekde muhendis olmaq isteyirem",
+      "expected": "Gələcəkdə mühəndis olmaq istəyirəm.",
+      "aligned": true,
+      "word_corrections": {
+        "total_words": 4,
+        "corrected": 0,
+        "correct_corrections": 0,
+        "incorrect_corrections": 0,
+        "unchanged": 4
+      },
+      "corrections": [
+        {
+          "position": 0,
+          "typo": "gelecekde",
+          "corrected": "gelecekde",
+          "distance": 999
+        },
+        {
+          "position": 1,
+          "typo": "muhendis",
+          "corrected": "muhendis",
+          "distance": 999
+        },
+        {
+          "position": 2,
+          "typo": "olmaq",
+          "corrected": "olmaq",
+          "distance": 999
+        },
+        {
+          "position": 3,
+          "typo": "isteyirem",
+          "corrected": "isteyirem",
+          "distance": 999
+        }
+      ],
+      "accuracy": null
+    },
+    {
+      "id": 15,
+      "original": "Sabah erkenden yola dusmeliyik.",
+      "corrected": "sabah erkenden yola dusmeliyik",
+      "expected": "Sabah erkəndən yola düşməliyik.",
+      "aligned": true,
+      "word_corrections": {
+        "total_words": 4,
+        "corrected": 0,
+        "correct_corrections": 0,
+        "incorrect_corrections": 0,
+        "unchanged": 4
+      },
+      "corrections": [
+        {
+          "position": 0,
+          "typo": "sabah",
+          "corrected": "sabah",
+          "distance": 999
+        },
+        {
+          "position": 1,
+          "typo": "erkenden",
+          "corrected": "erkenden",
+          "distance": 999
+        },
+        {
+          "position": 2,
+          "typo": "yola",
+          "corrected": "yola",
+          "distance": 999
+        },
+        {
+          "position": 3,
+          "typo": "dusmeliyik",
+          "corrected": "dusmeliyik",
+          "distance": 999
+        }
+      ],
+      "accuracy": null
+    },
+    {
+      "id": 16,
+      "original": "Onun dediyi sozler mene cox toxundu.",
+      "corrected": "onun dediyi sozler mene çox toxundu",
+      "expected": "Onun dediyi sözlər mənə çox toxundu.",
+      "aligned": true,
+      "word_corrections": {
+        "total_words": 6,
+        "corrected": 1,
+        "correct_corrections": 1,
+        "incorrect_corrections": 0,
+        "unchanged": 5
+      },
+      "corrections": [
+        {
+          "position": 0,
+          "typo": "onun",
+          "corrected": "onun",
+          "distance": 999
+        },
+        {
+          "position": 1,
+          "typo": "dediyi",
+          "corrected": "dediyi",
+          "distance": 999
+        },
+        {
+          "position": 2,
+          "typo": "sozler",
+          "corrected": "sozler",
+          "distance": 999
+        },
+        {
+          "position": 3,
+          "typo": "mene",
+          "corrected": "mene",
+          "distance": 999
+        },
+        {
+          "position": 4,
+          "typo": "cox",
+          "corrected": "çox",
+          "expected": "çox",
+          "is_correct": true,
+          "distance": 0.2
+        },
+        {
+          "position": 5,
+          "typo": "toxundu",
+          "corrected": "toxundu",
+          "distance": 999
+        }
+      ],
+      "accuracy": 1.0
+    },
+    {
+      "id": 17,
+      "original": "Sehifeni yenileyin ve yeninden cehd edin.",
+      "corrected": "sehifeni yenileyin ən yeninden cehd edin",
+      "expected": "Səhifəni yeniləyin və yenidən cəhd edin.",
+      "aligned": true,
+      "word_corrections": {
+        "total_words": 6,
+        "corrected": 1,
+        "correct_corrections": 0,
+        "incorrect_corrections": 1,
+        "unchanged": 5
+      },
+      "corrections": [
+        {
+          "position": 0,
+          "typo": "sehifeni",
+          "corrected": "sehifeni",
+          "distance": 999
+        },
+        {
+          "position": 1,
+          "typo": "yenileyin",
+          "corrected": "yenileyin",
+          "distance": 999
+        },
+        {
+          "position": 2,
+          "typo": "ve",
+          "corrected": "ən",
+          "expected": "və",
+          "is_correct": false,
+          "distance": 2.0
+        },
+        {
+          "position": 3,
+          "typo": "yeninden",
+          "corrected": "yeninden",
+          "distance": 999
+        },
+        {
+          "position": 4,
+          "typo": "cehd",
+          "corrected": "cehd",
+          "distance": 999
+        },
+        {
+          "position": 5,
+          "typo": "edin",
+          "corrected": "edin",
+          "distance": 999
+        }
+      ],
+      "accuracy": 0.0
+    },
+    {
+      "id": 18,
+      "original": "Bu mesele haqqinda dusunmek lazimdir.",
+      "corrected": "ən mesele haqqinda dusunmek lazimdir",
+      "expected": "Bu məsələ haqqında düşünmək lazımdır.",
+      "aligned": true,
+      "word_corrections": {
+        "total_words": 5,
+        "corrected": 1,
+        "correct_corrections": 0,
+        "incorrect_corrections": 1,
+        "unchanged": 4
+      },
+      "corrections": [
+        {
+          "position": 0,
+          "typo": "bu",
+          "corrected": "ən",
+          "expected": "bu",
+          "is_correct": false,
+          "distance": 2.0
+        },
+        {
+          "position": 1,
+          "typo": "mesele",
+          "corrected": "mesele",
+          "distance": 999
+        },
+        {
+          "position": 2,
+          "typo": "haqqinda",
+          "corrected": "haqqinda",
+          "distance": 999
+        },
+        {
+          "position": 3,
+          "typo": "dusunmek",
+          "corrected": "dusunmek",
+          "distance": 999
+        },
+        {
+          "position": 4,
+          "typo": "lazimdir",
+          "corrected": "lazimdir",
+          "distance": 999
+        }
+      ],
+      "accuracy": 0.0
+    },
+    {
+      "id": 19,
+      "original": "Mekteb ileri en gozel xatirelerdir.",
+      "corrected": "mekteb ileri ən gozel xatirelerdir",
+      "expected": "Məktəb illəri ən gözəl xatirələrdir.",
+      "aligned": true,
+      "word_corrections": {
+        "total_words": 5,
+        "corrected": 1,
+        "correct_corrections": 1,
+        "incorrect_corrections": 0,
+        "unchanged": 4
+      },
+      "corrections": [
+        {
+          "position": 0,
+          "typo": "mekteb",
+          "corrected": "mekteb",
+          "distance": 999
+        },
+        {
+          "position": 1,
+          "typo": "ileri",
+          "corrected": "ileri",
+          "distance": 999
+        },
+        {
+          "position": 2,
+          "typo": "en",
+          "corrected": "ən",
+          "expected": "ən",
+          "is_correct": true,
+          "distance": 1.0
+        },
+        {
+          "position": 3,
+          "typo": "gozel",
+          "corrected": "gozel",
+          "distance": 999
+        },
+        {
+          "position": 4,
+          "typo": "xatirelerdir",
+          "corrected": "xatirelerdir",
+          "distance": 999
+        }
+      ],
+      "accuracy": 1.0
+    },
+    {
+      "id": 20,
+      "original": "Zefer gunu xalqimiz ucun cox onemlidir.",
+      "corrected": "zefer gunu xalqimiz ucun çox onemlidir",
+      "expected": "Zəfər günü xalqımız üçün çox önəmlidir.",
+      "aligned": true,
+      "word_corrections": {
+        "total_words": 6,
+        "corrected": 1,
+        "correct_corrections": 1,
+        "incorrect_corrections": 0,
+        "unchanged": 5
+      },
+      "corrections": [
+        {
+          "position": 0,
+          "typo": "zefer",
+          "corrected": "zefer",
+          "distance": 999
+        },
+        {
+          "position": 1,
+          "typo": "gunu",
+          "corrected": "gunu",
+          "distance": 999
+        },
+        {
+          "position": 2,
+          "typo": "xalqimiz",
+          "corrected": "xalqimiz",
+          "distance": 999
+        },
+        {
+          "position": 3,
+          "typo": "ucun",
+          "corrected": "ucun",
+          "distance": 999
+        },
+        {
+          "position": 4,
+          "typo": "cox",
+          "corrected": "çox",
+          "expected": "çox",
+          "is_correct": true,
+          "distance": 0.2
+        },
+        {
+          "position": 5,
+          "typo": "onemlidir",
+          "corrected": "onemlidir",
+          "distance": 999
+        }
+      ],
+      "accuracy": 1.0
+    },
+    {
+      "id": 21,
+      "original": "Komputer proqramlarin oyrenmek asan deyil.",
+      "corrected": "komputer proqramlarin oyrenmek asan deyil",
+      "expected": "Kompüter proqramlarını öyrənmək asan deyil.",
+      "aligned": true,
+      "word_corrections": {
+        "total_words": 5,
+        "corrected": 0,
+        "correct_corrections": 0,
+        "incorrect_corrections": 0,
+        "unchanged": 5
+      },
+      "corrections": [
+        {
+          "position": 0,
+          "typo": "komputer",
+          "corrected": "komputer",
+          "distance": 999
+        },
+        {
+          "position": 1,
+          "typo": "proqramlarin",
+          "corrected": "proqramlarin",
+          "distance": 999
+        },
+        {
+          "position": 2,
+          "typo": "oyrenmek",
+          "corrected": "oyrenmek",
+          "distance": 999
+        },
+        {
+          "position": 3,
+          "typo": "asan",
+          "corrected": "asan",
+          "distance": 999
+        },
+        {
+          "position": 4,
+          "typo": "deyil",
+          "corrected": "deyil",
+          "distance": 999
+        }
+      ],
+      "accuracy": null
+    },
+    {
+      "id": 22,
+      "original": "Biz birlikde daha gucluyuk.",
+      "corrected": "biz birlikde daha gucluyuk",
+      "expected": "Biz birlikdə daha güclüyük.",
+      "aligned": true,
+      "word_corrections": {
+        "total_words": 4,
+        "corrected": 0,
+        "correct_corrections": 0,
+        "incorrect_corrections": 0,
+        "unchanged": 4
+      },
+      "corrections": [
+        {
+          "position": 0,
+          "typo": "biz",
+          "corrected": "biz",
+          "distance": 999
+        },
+        {
+          "position": 1,
+          "typo": "birlikde",
+          "corrected": "birlikde",
+          "distance": 999
+        },
+        {
+          "position": 2,
+          "typo": "daha",
+          "corrected": "daha",
+          "distance": 999
+        },
+        {
+          "position": 3,
+          "typo": "gucluyuk",
+          "corrected": "gucluyuk",
+          "distance": 999
+        }
+      ],
+      "accuracy": null
+    },
+    {
+      "id": 23,
+      "original": "Bu binanin memarligi cox mohtesemdir.",
+      "corrected": "ən binanin memarligi çox mohtesemdir",
+      "expected": "Bu binanın memarlığı çox möhtəşəmdir.",
+      "aligned": true,
+      "word_corrections": {
+        "total_words": 5,
+        "corrected": 2,
+        "correct_corrections": 1,
+        "incorrect_corrections": 1,
+        "unchanged": 3
+      },
+      "corrections": [
+        {
+          "position": 0,
+          "typo": "bu",
+          "corrected": "ən",
+          "expected": "bu",
+          "is_correct": false,
+          "distance": 2.0
+        },
+        {
+          "position": 1,
+          "typo": "binanin",
+          "corrected": "binanin",
+          "distance": 999
+        },
+        {
+          "position": 2,
+          "typo": "memarligi",
+          "corrected": "memarligi",
+          "distance": 999
+        },
+        {
+          "position": 3,
+          "typo": "cox",
+          "corrected": "çox",
+          "expected": "çox",
+          "is_correct": true,
+          "distance": 0.2
+        },
+        {
+          "position": 4,
+          "typo": "mohtesemdir",
+          "corrected": "mohtesemdir",
+          "distance": 999
+        }
+      ],
+      "accuracy": 0.5
+    },
+    {
+      "id": 24,
+      "original": "Sizin teklifiniz bizim ucun maraqlidir.",
+      "corrected": "sizin teklifiniz bizim ucun maraqlidir",
+      "expected": "Sizin təklifiniz bizim üçün maraqlıdır.",
+      "aligned": true,
+      "word_corrections": {
+        "total_words": 5,
+        "corrected": 0,
+        "correct_corrections": 0,
+        "incorrect_corrections": 0,
+        "unchanged": 5
+      },
+      "corrections": [
+        {
+          "position": 0,
+          "typo": "sizin",
+          "corrected": "sizin",
+          "distance": 999
+        },
+        {
+          "position": 1,
+          "typo": "teklifiniz",
+          "corrected": "teklifiniz",
+          "distance": 999
+        },
+        {
+          "position": 2,
+          "typo": "bizim",
+          "corrected": "bizim",
+          "distance": 999
+        },
+        {
+          "position": 3,
+          "typo": "ucun",
+          "corrected": "ucun",
+          "distance": 999
+        },
+        {
+          "position": 4,
+          "typo": "maraqlidir",
+          "corrected": "maraqlidir",
+          "distance": 999
+        }
+      ],
+      "accuracy": null
+    },
+    {
+      "id": 25,
+      "original": "Dosluq en boyuk servetdir.",
+      "corrected": "dosluq ən boyuk servetdir",
+      "expected": "Dostluq ən böyük sərvətdir.",
+      "aligned": true,
+      "word_corrections": {
+        "total_words": 4,
+        "corrected": 1,
+        "correct_corrections": 1,
+        "incorrect_corrections": 0,
+        "unchanged": 3
+      },
+      "corrections": [
+        {
+          "position": 0,
+          "typo": "dosluq",
+          "corrected": "dosluq",
+          "distance": 999
+        },
+        {
+          "position": 1,
+          "typo": "en",
+          "corrected": "ən",
+          "expected": "ən",
+          "is_correct": true,
+          "distance": 1.0
+        },
+        {
+          "position": 2,
+          "typo": "boyuk",
+          "corrected": "boyuk",
+          "distance": 999
+        },
+        {
+          "position": 3,
+          "typo": "servetdir",
+          "corrected": "servetdir",
+          "distance": 999
+        }
+      ],
+      "accuracy": 1.0
+    },
+    {
+      "id": 26,
+      "original": "Masini ehtiyatla surmek lazimdir.",
+      "corrected": "masini ehtiyatla surmek lazimdir",
+      "expected": "Maşını ehtiyatla sürmək lazımdır.",
+      "aligned": true,
+      "word_corrections": {
+        "total_words": 4,
+        "corrected": 0,
+        "correct_corrections": 0,
+        "incorrect_corrections": 0,
+        "unchanged": 4
+      },
+      "corrections": [
+        {
+          "position": 0,
+          "typo": "masini",
+          "corrected": "masini",
+          "distance": 999
+        },
+        {
+          "position": 1,
+          "typo": "ehtiyatla",
+          "corrected": "ehtiyatla",
+          "distance": 999
+        },
+        {
+          "position": 2,
+          "typo": "surmek",
+          "corrected": "surmek",
+          "distance": 999
+        },
+        {
+          "position": 3,
+          "typo": "lazimdir",
+          "corrected": "lazimdir",
+          "distance": 999
+        }
+      ],
+      "accuracy": null
+    },
+    {
+      "id": 27,
+      "original": "O, her zaman vaxtinda gelir.",
+      "corrected": "ən her zaman vaxtinda gelir",
+      "expected": "O, hər zaman vaxtında gəlir.",
+      "aligned": true,
+      "word_corrections": {
+        "total_words": 5,
+        "corrected": 1,
+        "correct_corrections": 0,
+        "incorrect_corrections": 1,
+        "unchanged": 4
+      },
+      "corrections": [
+        {
+          "position": 0,
+          "typo": "o",
+          "corrected": "ən",
+          "expected": "o",
+          "is_correct": false,
+          "distance": 2.0
+        },
+        {
+          "position": 1,
+          "typo": "her",
+          "corrected": "her",
+          "distance": 999
+        },
+        {
+          "position": 2,
+          "typo": "zaman",
+          "corrected": "zaman",
+          "distance": 999
+        },
+        {
+          "position": 3,
+          "typo": "vaxtinda",
+          "corrected": "vaxtinda",
+          "distance": 999
+        },
+        {
+          "position": 4,
+          "typo": "gelir",
+          "corrected": "gelir",
+          "distance": 999
+        }
+      ],
+      "accuracy": 0.0
+    },
+    {
+      "id": 28,
+      "original": "Islerinizde muveffeqiyetler arzulayiram.",
+      "corrected": "islerinizde muveffeqiyetler arzulayiram",
+      "expected": "İşlərinizdə müvəffəqiyyətlər arzulayıram.",
+      "aligned": false,
+      "word_corrections": {
+        "total_words": 3,
+        "corrected": 0,
+        "correct_corrections": 0,
+        "incorrect_corrections": 0,
+        "unchanged": 3
+      },
+      "corrections": [
+        {
+          "position": 0,
+          "typo": "islerinizde",
+          "corrected": "islerinizde",
+          "distance": 999
+        },
+        {
+          "position": 1,
+          "typo": "muveffeqiyetler",
+          "corrected": "muveffeqiyetler",
+          "distance": 999
+        },
+        {
+          "position": 2,
+          "typo": "arzulayiram",
+          "corrected": "arzulayiram",
+          "distance": 999
+        }
+      ],
+      "accuracy": null
+    },
+    {
+      "id": 29,
+      "original": "Usaqlar parkda senlik edirler.",
+      "corrected": "usaqlar parkda senlik edirler",
+      "expected": "Uşaqlar parkda şənlik edirlər.",
+      "aligned": true,
+      "word_corrections": {
+        "total_words": 4,
+        "corrected": 0,
+        "correct_corrections": 0,
+        "incorrect_corrections": 0,
+        "unchanged": 4
+      },
+      "corrections": [
+        {
+          "position": 0,
+          "typo": "usaqlar",
+          "corrected": "usaqlar",
+          "distance": 999
+        },
+        {
+          "position": 1,
+          "typo": "parkda",
+          "corrected": "parkda",
+          "distance": 999
+        },
+        {
+          "position": 2,
+          "typo": "senlik",
+          "corrected": "senlik",
+          "distance": 999
+        },
+        {
+          "position": 3,
+          "typo": "edirler",
+          "corrected": "edirler",
+          "distance": 999
+        }
+      ],
+      "accuracy": null
+    },
+    {
+      "id": 30,
+      "original": "Bu gun cox yorulmusam.",
+      "corrected": "ən ən çox yorulmusam",
+      "expected": "Bu gün çox yorulmuşam.",
+      "aligned": true,
+      "word_corrections": {
+        "total_words": 4,
+        "corrected": 3,
+        "correct_corrections": 1,
+        "incorrect_corrections": 2,
+        "unchanged": 1
+      },
+      "corrections": [
+        {
+          "position": 0,
+          "typo": "bu",
+          "corrected": "ən",
+          "expected": "bu",
+          "is_correct": false,
+          "distance": 2.0
+        },
+        {
+          "position": 1,
+          "typo": "gun",
+          "corrected": "ən",
+          "expected": "gün",
+          "is_correct": false,
+          "distance": 2.0
+        },
+        {
+          "position": 2,
+          "typo": "cox",
+          "corrected": "çox",
+          "expected": "çox",
+          "is_correct": true,
+          "distance": 0.2
+        },
+        {
+          "position": 3,
+          "typo": "yorulmusam",
+          "corrected": "yorulmusam",
+          "distance": 999
+        }
+      ],
+      "accuracy": 0.3333333333333333
+    },
+    {
+      "id": 31,
+      "original": "Heyat suprizlerle doludur.",
+      "corrected": "heyat suprizlerle doludur",
+      "expected": "Həyat sürprizlərlə doludur.",
+      "aligned": true,
+      "word_corrections": {
+        "total_words": 3,
+        "corrected": 0,
+        "correct_corrections": 0,
+        "incorrect_corrections": 0,
+        "unchanged": 3
+      },
+      "corrections": [
+        {
+          "position": 0,
+          "typo": "heyat",
+          "corrected": "heyat",
+          "distance": 999
+        },
+        {
+          "position": 1,
+          "typo": "suprizlerle",
+          "corrected": "suprizlerle",
+          "distance": 999
+        },
+        {
+          "position": 2,
+          "typo": "doludur",
+          "corrected": "doludur",
+          "distance": 999
+        }
+      ],
+      "accuracy": null
+    },
+    {
+      "id": 32,
+      "original": "Yemek heqiqeten cox lezzetlidir.",
+      "corrected": "yemek heqiqeten çox lezzetlidir",
+      "expected": "Yemək həqiqətən çox ləzzətlidir.",
+      "aligned": true,
+      "word_corrections": {
+        "total_words": 4,
+        "corrected": 1,
+        "correct_corrections": 1,
+        "incorrect_corrections": 0,
+        "unchanged": 3
+      },
+      "corrections": [
+        {
+          "position": 0,
+          "typo": "yemek",
+          "corrected": "yemek",
+          "distance": 999
+        },
+        {
+          "position": 1,
+          "typo": "heqiqeten",
+          "corrected": "heqiqeten",
+          "distance": 999
+        },
+        {
+          "position": 2,
+          "typo": "cox",
+          "corrected": "çox",
+          "expected": "çox",
+          "is_correct": true,
+          "distance": 0.2
+        },
+        {
+          "position": 3,
+          "typo": "lezzetlidir",
+          "corrected": "lezzetlidir",
+          "distance": 999
+        }
+      ],
+      "accuracy": 1.0
+    },
+    {
+      "id": 33,
+      "original": "Televizorda maraqli verilish var.",
+      "corrected": "televizorda maraqli verilish var",
+      "expected": "Televizorda maraqlı veriliş var.",
+      "aligned": true,
+      "word_corrections": {
+        "total_words": 4,
+        "corrected": 0,
+        "correct_corrections": 0,
+        "incorrect_corrections": 0,
+        "unchanged": 4
+      },
+      "corrections": [
+        {
+          "position": 0,
+          "typo": "televizorda",
+          "corrected": "televizorda",
+          "distance": 999
+        },
+        {
+          "position": 1,
+          "typo": "maraqli",
+          "corrected": "maraqli",
+          "distance": 999
+        },
+        {
+          "position": 2,
+          "typo": "verilish",
+          "corrected": "verilish",
+          "distance": 999
+        },
+        {
+          "position": 3,
+          "typo": "var",
+          "corrected": "var",
+          "distance": 999
+        }
+      ],
+      "accuracy": null
+    },
+    {
+      "id": 34,
+      "original": "Musiqi dinlemek meni sakitleshdirir.",
+      "corrected": "musiqi dinlemek meni sakitleshdirir",
+      "expected": "Musiqi dinləmək məni sakitləşdirir.",
+      "aligned": true,
+      "word_corrections": {
+        "total_words": 4,
+        "corrected": 0,
+        "correct_corrections": 0,
+        "incorrect_corrections": 0,
+        "unchanged": 4
+      },
+      "corrections": [
+        {
+          "position": 0,
+          "typo": "musiqi",
+          "corrected": "musiqi",
+          "distance": 999
+        },
+        {
+          "position": 1,
+          "typo": "dinlemek",
+          "corrected": "dinlemek",
+          "distance": 999
+        },
+        {
+          "position": 2,
+          "typo": "meni",
+          "corrected": "meni",
+          "distance": 999
+        },
+        {
+          "position": 3,
+          "typo": "sakitleshdirir",
+          "corrected": "sakitleshdirir",
+          "distance": 999
+        }
+      ],
+      "accuracy": null
+    },
+    {
+      "id": 35,
+      "original": "Gozlerim bir az yorulub.",
+      "corrected": "gozlerim bir ən yorulub",
+      "expected": "Gözlərim bir az yorulub.",
+      "aligned": true,
+      "word_corrections": {
+        "total_words": 4,
+        "corrected": 1,
+        "correct_corrections": 0,
+        "incorrect_corrections": 1,
+        "unchanged": 3
+      },
+      "corrections": [
+        {
+          "position": 0,
+          "typo": "gozlerim",
+          "corrected": "gozlerim",
+          "distance": 999
+        },
+        {
+          "position": 1,
+          "typo": "bir",
+          "corrected": "bir",
+          "distance": 999
+        },
+        {
+          "position": 2,
+          "typo": "az",
+          "corrected": "ən",
+          "expected": "az",
+          "is_correct": false,
+          "distance": 1.25
+        },
+        {
+          "position": 3,
+          "typo": "yorulub",
+          "corrected": "yorulub",
+          "distance": 999
+        }
+      ],
+      "accuracy": 0.0
+    },
+    {
+      "id": 36,
+      "original": "Otagi seliqeye salmaq vaxtidir.",
+      "corrected": "otagi seliqeye salmaq vaxtidir",
+      "expected": "Otağı səliqəyə salmaq vaxtıdır.",
+      "aligned": true,
+      "word_corrections": {
+        "total_words": 4,
+        "corrected": 0,
+        "correct_corrections": 0,
+        "incorrect_corrections": 0,
+        "unchanged": 4
+      },
+      "corrections": [
+        {
+          "position": 0,
+          "typo": "otagi",
+          "corrected": "otagi",
+          "distance": 999
+        },
+        {
+          "position": 1,
+          "typo": "seliqeye",
+          "corrected": "seliqeye",
+          "distance": 999
+        },
+        {
+          "position": 2,
+          "typo": "salmaq",
+          "corrected": "salmaq",
+          "distance": 999
+        },
+        {
+          "position": 3,
+          "typo": "vaxtidir",
+          "corrected": "vaxtidir",
+          "distance": 999
+        }
+      ],
+      "accuracy": null
+    },
+    {
+      "id": 37,
+      "original": "Yeni ile az qalib.",
+      "corrected": "yeni ile ən qalib",
+      "expected": "Yeni ilə az qalıb.",
+      "aligned": true,
+      "word_corrections": {
+        "total_words": 4,
+        "corrected": 1,
+        "correct_corrections": 0,
+        "incorrect_corrections": 1,
+        "unchanged": 3
+      },
+      "corrections": [
+        {
+          "position": 0,
+          "typo": "yeni",
+          "corrected": "yeni",
+          "distance": 999
+        },
+        {
+          "position": 1,
+          "typo": "ile",
+          "corrected": "ile",
+          "distance": 999
+        },
+        {
+          "position": 2,
+          "typo": "az",
+          "corrected": "ən",
+          "expected": "az",
+          "is_correct": false,
+          "distance": 1.25
+        },
+        {
+          "position": 3,
+          "typo": "qalib",
+          "corrected": "qalib",
+          "distance": 999
+        }
+      ],
+      "accuracy": 0.0
+    },
+    {
+      "id": 38,
+      "original": "Menim sualima cavab vermediniz.",
+      "corrected": "menim sualima cavab vermediniz",
+      "expected": "Mənim sualıma cavab vermədiniz.",
+      "aligned": true,
+      "word_corrections": {
+        "total_words": 4,
+        "corrected": 0,
+        "correct_corrections": 0,
+        "incorrect_corrections": 0,
+        "unchanged": 4
+      },
+      "corrections": [
+        {
+          "position": 0,
+          "typo": "menim",
+          "corrected": "menim",
+          "distance": 999
+        },
+        {
+          "position": 1,
+          "typo": "sualima",
+          "corrected": "sualima",
+          "distance": 999
+        },
+        {
+          "position": 2,
+          "typo": "cavab",
+          "corrected": "cavab",
+          "distance": 999
+        },
+        {
+          "position": 3,
+          "typo": "vermediniz",
+          "corrected": "vermediniz",
+          "distance": 999
+        }
+      ],
+      "accuracy": null
+    },
+    {
+      "id": 39,
+      "original": "Kucede guclu kulek esir.",
+      "corrected": "kucede guclu kulek esir",
+      "expected": "Küçədə güclü külək əsir.",
+      "aligned": true,
+      "word_corrections": {
+        "total_words": 4,
+        "corrected": 0,
+        "correct_corrections": 0,
+        "incorrect_corrections": 0,
+        "unchanged": 4
+      },
+      "corrections": [
+        {
+          "position": 0,
+          "typo": "kucede",
+          "corrected": "kucede",
+          "distance": 999
+        },
+        {
+          "position": 1,
+          "typo": "guclu",
+          "corrected": "guclu",
+          "distance": 999
+        },
+        {
+          "position": 2,
+          "typo": "kulek",
+          "corrected": "kulek",
+          "distance": 999
+        },
+        {
+          "position": 3,
+          "typo": "esir",
+          "corrected": "esir",
+          "distance": 999
+        }
+      ],
+      "accuracy": null
+    },
+    {
+      "id": 40,
+      "original": "Senin fikrin menim ucun onemlidir.",
+      "corrected": "senin fikrin menim ucun onemlidir",
+      "expected": "Sənin fikrin mənim üçün önəmlidir.",
+      "aligned": true,
+      "word_corrections": {
+        "total_words": 5,
+        "corrected": 0,
+        "correct_corrections": 0,
+        "incorrect_corrections": 0,
+        "unchanged": 5
+      },
+      "corrections": [
+        {
+          "position": 0,
+          "typo": "senin",
+          "corrected": "senin",
+          "distance": 999
+        },
+        {
+          "position": 1,
+          "typo": "fikrin",
+          "corrected": "fikrin",
+          "distance": 999
+        },
+        {
+          "position": 2,
+          "typo": "menim",
+          "corrected": "menim",
+          "distance": 999
+        },
+        {
+          "position": 3,
+          "typo": "ucun",
+          "corrected": "ucun",
+          "distance": 999
+        },
+        {
+          "position": 4,
+          "typo": "onemlidir",
+          "corrected": "onemlidir",
+          "distance": 999
+        }
+      ],
+      "accuracy": null
+    },
+    {
+      "id": 41,
+      "original": "Imtahan neticeleri sabah elan olunacaq.",
+      "corrected": "imtahan neticeleri sabah elan olunacaq",
+      "expected": "İmtahan nəticələri sabah elan olunacaq.",
+      "aligned": false,
+      "word_corrections": {
+        "total_words": 5,
+        "corrected": 0,
+        "correct_corrections": 0,
+        "incorrect_corrections": 0,
+        "unchanged": 5
+      },
+      "corrections": [
+        {
+          "position": 0,
+          "typo": "imtahan",
+          "corrected": "imtahan",
+          "distance": 999
+        },
+        {
+          "position": 1,
+          "typo": "neticeleri",
+          "corrected": "neticeleri",
+          "distance": 999
+        },
+        {
+          "position": 2,
+          "typo": "sabah",
+          "corrected": "sabah",
+          "distance": 999
+        },
+        {
+          "position": 3,
+          "typo": "elan",
+          "corrected": "elan",
+          "distance": 999
+        },
+        {
+          "position": 4,
+          "typo": "olunacaq",
+          "corrected": "olunacaq",
+          "distance": 999
+        }
+      ],
+      "accuracy": null
+    },
+    {
+      "id": 42,
+      "original": "Qapini baglamagi unutmayin.",
+      "corrected": "qapini baglamagi unutmayin",
+      "expected": "Qapını bağlamağı unutmayın.",
+      "aligned": true,
+      "word_corrections": {
+        "total_words": 3,
+        "corrected": 0,
+        "correct_corrections": 0,
+        "incorrect_corrections": 0,
+        "unchanged": 3
+      },
+      "corrections": [
+        {
+          "position": 0,
+          "typo": "qapini",
+          "corrected": "qapini",
+          "distance": 999
+        },
+        {
+          "position": 1,
+          "typo": "baglamagi",
+          "corrected": "baglamagi",
+          "distance": 999
+        },
+        {
+          "position": 2,
+          "typo": "unutmayin",
+          "corrected": "unutmayin",
+          "distance": 999
+        }
+      ],
+      "accuracy": null
+    },
+    {
+      "id": 43,
+      "original": "Deniz kenarinda gezmeyi sevirem.",
+      "corrected": "deniz kenarinda gezmeyi sevirem",
+      "expected": "Dəniz kənarında gəzməyi sevirəm.",
+      "aligned": true,
+      "word_corrections": {
+        "total_words": 4,
+        "corrected": 0,
+        "correct_corrections": 0,
+        "incorrect_corrections": 0,
+        "unchanged": 4
+      },
+      "corrections": [
+        {
+          "position": 0,
+          "typo": "deniz",
+          "corrected": "deniz",
+          "distance": 999
+        },
+        {
+          "position": 1,
+          "typo": "kenarinda",
+          "corrected": "kenarinda",
+          "distance": 999
+        },
+        {
+          "position": 2,
+          "typo": "gezmeyi",
+          "corrected": "gezmeyi",
+          "distance": 999
+        },
+        {
+          "position": 3,
+          "typo": "sevirem",
+          "corrected": "sevirem",
+          "distance": 999
+        }
+      ],
+      "accuracy": null
+    },
+    {
+      "id": 44,
+      "original": "Her kes oz isi ile mesgul olsun.",
+      "corrected": "her kes ən isi ile mesgul olsun",
+      "expected": "Hər kəs öz işi ilə məşğul olsun.",
+      "aligned": true,
+      "word_corrections": {
+        "total_words": 7,
+        "corrected": 1,
+        "correct_corrections": 0,
+        "incorrect_corrections": 1,
+        "unchanged": 6
+      },
+      "corrections": [
+        {
+          "position": 0,
+          "typo": "her",
+          "corrected": "her",
+          "distance": 999
+        },
+        {
+          "position": 1,
+          "typo": "kes",
+          "corrected": "kes",
+          "distance": 999
+        },
+        {
+          "position": 2,
+          "typo": "oz",
+          "corrected": "ən",
+          "expected": "öz",
+          "is_correct": false,
+          "distance": 2.0
+        },
+        {
+          "position": 3,
+          "typo": "isi",
+          "corrected": "isi",
+          "distance": 999
+        },
+        {
+          "position": 4,
+          "typo": "ile",
+          "corrected": "ile",
+          "distance": 999
+        },
+        {
+          "position": 5,
+          "typo": "mesgul",
+          "corrected": "mesgul",
+          "distance": 999
+        },
+        {
+          "position": 6,
+          "typo": "olsun",
+          "corrected": "olsun",
+          "distance": 999
+        }
+      ],
+      "accuracy": 0.0
+    },
+    {
+      "id": 45,
+      "original": "Kitabin uz qabigi cox celbedicidir.",
+      "corrected": "kitabin ən qabigi çox celbedicidir",
+      "expected": "Kitabın üz qabığı çox cəlbedicidir.",
+      "aligned": true,
+      "word_corrections": {
+        "total_words": 5,
+        "corrected": 2,
+        "correct_corrections": 1,
+        "incorrect_corrections": 1,
+        "unchanged": 3
+      },
+      "corrections": [
+        {
+          "position": 0,
+          "typo": "kitabin",
+          "corrected": "kitabin",
+          "distance": 999
+        },
+        {
+          "position": 1,
+          "typo": "uz",
+          "corrected": "ən",
+          "expected": "üz",
+          "is_correct": false,
+          "distance": 2.0
+        },
+        {
+          "position": 2,
+          "typo": "qabigi",
+          "corrected": "qabigi",
+          "distance": 999
+        },
+        {
+          "position": 3,
+          "typo": "cox",
+          "corrected": "çox",
+          "expected": "çox",
+          "is_correct": true,
+          "distance": 0.2
+        },
+        {
+          "position": 4,
+          "typo": "celbedicidir",
+          "corrected": "celbedicidir",
+          "distance": 999
+        }
+      ],
+      "accuracy": 0.5
+    },
+    {
+      "id": 46,
+      "original": "Size bir sual vere bilerem?",
+      "corrected": "size bir sual vere bilerem",
+      "expected": "Sizə bir sual verə bilərəm?",
+      "aligned": true,
+      "word_corrections": {
+        "total_words": 5,
+        "corrected": 0,
+        "correct_corrections": 0,
+        "incorrect_corrections": 0,
+        "unchanged": 5
+      },
+      "corrections": [
+        {
+          "position": 0,
+          "typo": "size",
+          "corrected": "size",
+          "distance": 999
+        },
+        {
+          "position": 1,
+          "typo": "bir",
+          "corrected": "bir",
+          "distance": 999
+        },
+        {
+          "position": 2,
+          "typo": "sual",
+          "corrected": "sual",
+          "distance": 999
+        },
+        {
+          "position": 3,
+          "typo": "vere",
+          "corrected": "vere",
+          "distance": 999
+        },
+        {
+          "position": 4,
+          "typo": "bilerem",
+          "corrected": "bilerem",
+          "distance": 999
+        }
+      ],
+      "accuracy": null
+    },
+    {
+      "id": 47,
+      "original": "Baki kulekler seheridir.",
+      "corrected": "baki kulekler seheridir",
+      "expected": "Bakı küləklər şəhəridir.",
+      "aligned": true,
+      "word_corrections": {
+        "total_words": 3,
+        "corrected": 0,
+        "correct_corrections": 0,
+        "incorrect_corrections": 0,
+        "unchanged": 3
+      },
+      "corrections": [
+        {
+          "position": 0,
+          "typo": "baki",
+          "corrected": "baki",
+          "distance": 999
+        },
+        {
+          "position": 1,
+          "typo": "kulekler",
+          "corrected": "kulekler",
+          "distance": 999
+        },
+        {
+          "position": 2,
+          "typo": "seheridir",
+          "corrected": "seheridir",
+          "distance": 999
+        }
+      ],
+      "accuracy": null
+    },
+    {
+      "id": 48,
+      "original": "Bu qerari vermek asan olmadi.",
+      "corrected": "ən qerari vermek asan olmadi",
+      "expected": "Bu qərarı vermək asan olmadı.",
+      "aligned": true,
+      "word_corrections": {
+        "total_words": 5,
+        "corrected": 1,
+        "correct_corrections": 0,
+        "incorrect_corrections": 1,
+        "unchanged": 4
+      },
+      "corrections": [
+        {
+          "position": 0,
+          "typo": "bu",
+          "corrected": "ən",
+          "expected": "bu",
+          "is_correct": false,
+          "distance": 2.0
+        },
+        {
+          "position": 1,
+          "typo": "qerari",
+          "corrected": "qerari",
+          "distance": 999
+        },
+        {
+          "position": 2,
+          "typo": "vermek",
+          "corrected": "vermek",
+          "distance": 999
+        },
+        {
+          "position": 3,
+          "typo": "asan",
+          "corrected": "asan",
+          "distance": 999
+        },
+        {
+          "position": 4,
+          "typo": "olmadi",
+          "corrected": "olmadi",
+          "distance": 999
+        }
+      ],
+      "accuracy": 0.0
+    },
+    {
+      "id": 49,
+      "original": "Onun gelishi hamini sevindirdi.",
+      "corrected": "onun gelishi hamini sevindirdi",
+      "expected": "Onun gəlişi hamını sevindirdi.",
+      "aligned": true,
+      "word_corrections": {
+        "total_words": 4,
+        "corrected": 0,
+        "correct_corrections": 0,
+        "incorrect_corrections": 0,
+        "unchanged": 4
+      },
+      "corrections": [
+        {
+          "position": 0,
+          "typo": "onun",
+          "corrected": "onun",
+          "distance": 999
+        },
+        {
+          "position": 1,
+          "typo": "gelishi",
+          "corrected": "gelishi",
+          "distance": 999
+        },
+        {
+          "position": 2,
+          "typo": "hamini",
+          "corrected": "hamini",
+          "distance": 999
+        },
+        {
+          "position": 3,
+          "typo": "sevindirdi",
+          "corrected": "sevindirdi",
+          "distance": 999
+        }
+      ],
+      "accuracy": null
+    },
+    {
+      "id": 50,
+      "original": "Biz her zaman sizin yaninizdayiq.",
+      "corrected": "biz her zaman sizin yaninizdayiq",
+      "expected": "Biz hər zaman sizin yanınızdayıq.",
+      "aligned": true,
+      "word_corrections": {
+        "total_words": 5,
+        "corrected": 0,
+        "correct_corrections": 0,
+        "incorrect_corrections": 0,
+        "unchanged": 5
+      },
+      "corrections": [
+        {
+          "position": 0,
+          "typo": "biz",
+          "corrected": "biz",
+          "distance": 999
+        },
+        {
+          "position": 1,
+          "typo": "her",
+          "corrected": "her",
+          "distance": 999
+        },
+        {
+          "position": 2,
+          "typo": "zaman",
+          "corrected": "zaman",
+          "distance": 999
+        },
+        {
+          "position": 3,
+          "typo": "sizin",
+          "corrected": "sizin",
+          "distance": 999
+        },
+        {
+          "position": 4,
+          "typo": "yaninizdayiq",
+          "corrected": "yaninizdayiq",
+          "distance": 999
+        }
+      ],
+      "accuracy": null
+    }
+  ]
+}
