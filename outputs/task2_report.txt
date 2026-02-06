@@ -4,23 +4,23 @@
 Heaps' Law Formula: V(n) = k * n^β
 
 Parameters Found:
-  k (constant):     1.0795
-  β (beta):         0.9549
-  R² (goodness):    0.9991
+  k (constant):     4.8553
+  β (beta):         0.7123
+  R² (goodness):    0.9974
 
 Interpretation:
 - k represents the vocabulary richness
 - β represents the rate of vocabulary growth (typically 0.4-0.6 for natural language)
-- β = 0.9549 indicates atypical vocabulary growth
+- β = 0.7123 indicates atypical vocabulary growth
 
 Data Points:
-  Total tokens analyzed:     60
-  Final vocabulary size:     54
-  Sample points:             60
+  Total tokens analyzed:     5,780,390
+  Final vocabulary size:     325,067
+  Sample points:             93
 
 Predicted vs Actual (last 5 points):
-  n=      56: Actual=    50, Predicted=    50.4, Error=   0.4
-  n=      57: Actual=    51, Predicted=    51.3, Error=   0.3
-  n=      58: Actual=    52, Predicted=    52.1, Error=   0.1
-  n=      59: Actual=    53, Predicted=    53.0, Error=   0.0
-  n=      60: Actual=    54, Predicted=    53.8, Error=   0.2
+  n=3,081,390: Actual=199,408, Predicted=203330.0, Error=3922.0
+  n=3,606,196: Actual=211,669, Predicted=227433.3, Error=15764.3
+  n=4,220,383: Actual=253,246, Predicted=254393.8, Error=1147.8
+  n=4,939,176: Actual=291,084, Predicted=284550.3, Error=6533.7
+  n=5,780,390: Actual=325,067, Predicted=318281.6, Error=6785.4

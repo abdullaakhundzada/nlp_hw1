@@ -2,21 +2,42 @@
 === SPELL CHECKER REPORT ===
 
 Vocabulary Statistics:
-  Vocabulary size: 4
-  Total words in corpus: 60
+  Vocabulary size: 145,697
+  Total words in corpus: 5,780,390
 
 Evaluation Results:
-  Test pairs: 3
-  Top-1 accuracy: 100.00%
-  Top-5 accuracy: 100.00%
+  Test pairs: 48
+  Top-1 accuracy: 62.50%
+  Top-5 accuracy: 85.42%
 
 Sample Test Cases:
 
-1. Misspelled: 'eox' | Correct: 'çox'
-   Suggestions: ['çox']
+1. Misspelled: 'orxulu' | Correct: 'qorxulu'
+   Suggestions: ['qorxulu', 'ordusu', 'oxucu']
 
-2. Misspelled: 'azərbayacn' | Correct: 'azərbaycan'
-   Suggestions: ['azərbaycan']
+2. Misspelled: 'riciilyin' | Correct: 'riciliyin'
+   Suggestions: ['riciliyin']
 
-3. Misspelled: 'miili' | Correct: 'milli'
-   Suggestions: ['milli']
+3. Misspelled: 'ağblaq' | Correct: 'ağbulaq'
+   Suggestions: ['ağbulaq', 'ağalar', 'ağalıq']
+
+4. Misspelled: 'opopsite' | Correct: 'opposite'
+   Suggestions: ['opposite']
+
+5. Misspelled: 'camegron' | Correct: 'cameron'
+   Suggestions: ['cameron', 'kameron']
+
+6. Misspelled: 'arifləriş' | Correct: 'ariflərin'
+   Suggestions: ['ariflərin', 'arilərin', 'tarifləri']
+
+7. Misspelled: 'materiaı' | Correct: 'materialı'
+   Suggestions: ['material', 'materialı', 'materia']
+
+8. Misspelled: 'işıqlndırma' | Correct: 'işıqlandırma'
+   Suggestions: ['işıqlandırma', 'işıqlandırmaq', 'şıqlandırma']
+
+9. Misspelled: 'ekologiyan' | Correct: 'ekologiyamn'
+   Suggestions: ['ekologiya', 'ekologiyanı', 'ekologiyanm']
+
+10. Misspelled: 'çqatdır' | Correct: 'çatdır'
+   Suggestions: ['çatdır', 'çatır', 'çatdı']

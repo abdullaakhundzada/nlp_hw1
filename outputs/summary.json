@@ -1,32 +1,32 @@
 {
   "data_statistics": {
-    "total_files": 3,
-    "total_pages": 6,
-    "total_characters": 475,
-    "total_lines": 6
+    "total_files": 76,
+    "total_pages": 18497,
+    "total_characters": 41203162,
+    "total_lines": 18497
   },
   "task1": {
-    "total_tokens": 60,
-    "total_types": 54,
-    "type_token_ratio": 0.9
+    "total_tokens": 5780390,
+    "total_types": 325067,
+    "type_token_ratio": 0.05623617091580326
   },
   "task2": {
-    "k": 1.0795480838863223,
-    "beta": 0.9548586551006433,
-    "r_squared": 0.9990552476996615
+    "k": 4.855267278970355,
+    "beta": 0.7123083306812791,
+    "r_squared": 0.9973772647617292
   },
   "task3": {
-    "vocabulary_size": 94,
-    "num_merges": 100
+    "vocabulary_size": 1047,
+    "num_merges": 1000
   },
   "task4": {
-    "total_sentences": 11,
-    "avg_sentence_length": 5.363636363636363
+    "total_sentences": 1,
+    "avg_sentence_length": 5670197.0
   },
   "task5": {
-    "vocabulary_size": 4
+    "vocabulary_size": 145697
   },
   "extra_task": {
-    "confusion_patterns": 9
+    "confusion_patterns": 301
   }
 }

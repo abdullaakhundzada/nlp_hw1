@@ -1,23 +1,203 @@
 {
   "test_pairs": [
     [
-      "eox",
-      "çox"
+      "orxulu",
+      "qorxulu"
     ],
     [
-      "azərbayacn",
-      "azərbaycan"
+      "riciilyin",
+      "riciliyin"
     ],
     [
-      "miili",
-      "milli"
+      "ağblaq",
+      "ağbulaq"
+    ],
+    [
+      "opopsite",
+      "opposite"
+    ],
+    [
+      "camegron",
+      "cameron"
+    ],
+    [
+      "arifləriş",
+      "ariflərin"
+    ],
+    [
+      "materiaı",
+      "materialı"
+    ],
+    [
+      "işıqlndırma",
+      "işıqlandırma"
+    ],
+    [
+      "ekologiyan",
+      "ekologiyamn"
+    ],
+    [
+      "çqatdır",
+      "çatdır"
+    ],
+    [
+      "axındırg",
+      "axındır"
+    ],
+    [
+      "yaranş",
+      "yaran"
+    ],
+    [
+      "aparıbla",
+      "aparıblar"
+    ],
+    [
+      "abaridir",
+      "anbaridir"
+    ],
+    [
+      "koiup",
+      "koipu"
+    ],
+    [
+      "qılnıclı",
+      "qılınclı"
+    ],
+    [
+      "perifito",
+      "perifiton"
+    ],
+    [
+      "4625",
+      "6425"
+    ],
+    [
+      "rezervxardan",
+      "rezervuardan"
+    ],
+    [
+      "uratru",
+      "urartu"
+    ],
+    [
+      "seöm",
+      "sem"
+    ],
+    [
+      "diiagn",
+      "diigan"
+    ],
+    [
+      "qorqaslai",
+      "qorqasali"
+    ],
+    [
+      "nədlərni",
+      "nədlərin"
+    ],
+    [
+      "azaldilmaini",
+      "azaldilmasini"
+    ],
+    [
+      "istratoruw",
+      "istratoru"
+    ],
+    [
+      "danmiarkaya",
+      "danimarkaya"
+    ],
+    [
+      "ekçn",
+      "ekin"
+    ],
+    [
+      "sacbunu",
+      "sabunu"
+    ],
+    [
+      "riitubatilyin",
+      "riitubatliyin"
+    ],
+    [
+      "mheranilər",
+      "mehranilər"
+    ],
+    [
+      "müəyyələşdirilmiş",
+      "müəyyənləşdirilmiş"
+    ],
+    [
+      "uğramasıan",
+      "uğramasına"
+    ],
+    [
+      "legla",
+      "legal"
+    ],
+    [
+      "unifrma",
+      "uniforma"
+    ],
+    [
+      "istilyi",
+      "istiliyi"
+    ],
+    [
+      "layoutb",
+      "layout"
+    ],
+    [
+      "visitolori",
+      "vasitolori"
+    ],
+    [
+      "karnm",
+      "kranm"
+    ],
+    [
+      "sanlardanl",
+      "sanlardan"
+    ],
+    [
+      "dekompoizsiya",
+      "dekompozisiya"
+    ],
+    [
+      "ugarol",
+      "uçarol"
+    ],
+    [
+      "etdxirlər",
+      "etdirlər"
+    ],
+    [
+      "şeremtevin",
+      "şeremetevin"
+    ],
+    [
+      "cpo28",
+      "cop28"
+    ],
+    [
+      "raq",
+      "fraq"
+    ],
+    [
+      "51",
+      "591"
+    ],
+    [
+      "dəyərslizləşir",
+      "dəyərsizləşir"
     ]
   ],
   "evaluation": {
-    "total": 3,
-    "correct_top1": 3,
-    "correct_top5": 3,
-    "accuracy_top1": 1.0,
-    "accuracy_top5": 1.0
+    "total": 48,
+    "correct_top1": 30,
+    "correct_top5": 41,
+    "accuracy_top1": 0.625,
+    "accuracy_top5": 0.8541666666666666
   }
 }
