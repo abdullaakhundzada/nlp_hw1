@@ -1,4 +1,4 @@
-# Azerbaijani NLP Processing Tool 🇦🇿
+# Azerbaijani NLP Processing Tool 
 
 A comprehensive NLP toolkit for processing Azerbaijani text, implementing tokenization, Heaps' Law analysis, Byte Pair Encoding, sentence segmentation, and spell checking with both Levenshtein distance and weighted edit distance using confusion matrices.
 
@@ -18,9 +18,43 @@ A comprehensive NLP toolkit for processing Azerbaijani text, implementing tokeni
 │   ├── sentence_segmentation.py    # Task 4: Sentence segmentation
 │   ├── spell_checking.py           # Task 5: Spell checking (Levenshtein)
 │   └── extra_weighted.py           # Extra: Weighted edit distance
+├── test
+│   ├── compare_spell_checkers.py
+│   ├── CONFUSION_MATRIX_GUIDE.md
+│   ├── confusion_matrix.png
+│   ├── generate_confusion_matrix.py
+│   ├── REPORT.md
+│   ├── test_data.json
+│   ├── TESTING_GUIDE.md
+│   ├── TESTING_QUICK_REF.md
+│   ├── test_results
+│   │   ├── evaluation_report.txt
+│   │   └── evaluation_results.json
+│   └── test_spell_checker.py
 ├── main.py                         # Main execution script
 ├── streamlit_app.py                # Streamlit UI application
 ├── requirements.txt                # Python dependencies
+├── outputs
+│   ├── bpe_model.json
+│   ├── bpe_model.pkl
+│   ├── extra_task_report.txt
+│   ├── heaps_law_params.json
+│   ├── heaps_law_plot.png
+│   ├── sentence_segmenter.pkl
+│   ├── sentences.json
+│   ├── spell_checker.json
+│   ├── spell_checker.pkl
+│   ├── spell_test_pairs.json
+│   ├── summary.json
+│   ├── task2_report.txt
+│   ├── task3_report.txt
+│   ├── task4_report.txt
+│   ├── task5_report.txt
+│   ├── vocabulary.json
+│   ├── vocabulary.pkl
+│   ├── weighted_spell_checker_confusion.json
+│   ├── weighted_spell_checker_confusion.pkl
+│   └── weighted_spell_checker.pkl
 └── README.md                       # This file
 ```
 

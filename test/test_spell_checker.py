@@ -8,6 +8,10 @@ import argparse
 from typing import Dict, List, Tuple
 import re
 from collections import defaultdict
+import matplotlib
+matplotlib.use('Agg')
+import matplotlib.pyplot as plt
+import numpy as np
 
 # Import spell checker modules
 from src.spell_checking import SpellChecker
@@ -341,6 +345,137 @@ class SpellCheckerEvaluator:
                 f.write("\n")
         
         print(f"Report saved to: {output_path}")
+    
+    def generate_character_confusion_matrix(self, output_path: str = None):
+        """
+        Generate and plot character-level confusion matrix from test results
+        
+        Args:
+            output_path: Path to save the plot (optional)
+        
+        Returns:
+            Dictionary with confusion statistics
+        """
+        # Collect character-level errors
+        char_confusions = defaultdict(lambda: defaultdict(int))
+        
+        for result in self.results:
+            if not result['aligned']:
+                continue
+            
+            for correction in result['corrections']:
+                if 'expected' not in correction:
+                    continue
+                
+                typo_word = correction['typo']
+                expected_word = correction['expected']
+                
+                # Align characters and count substitutions
+                max_len = max(len(typo_word), len(expected_word))
+                
+                for i in range(max_len):
+                    char_typo = typo_word[i] if i < len(typo_word) else ''
+                    char_expected = expected_word[i] if i < len(expected_word) else ''
+                    
+                    if char_typo != char_expected:
+                        char_confusions[char_typo][char_expected] += 1
+        
+        # Get top confused characters
+        all_confusions = []
+        for char1, char2_dict in char_confusions.items():
+            for char2, count in char2_dict.items():
+                if count > 0:
+                    all_confusions.append((char1, char2, count))
+        
+        all_confusions.sort(key=lambda x: x[2], reverse=True)
+        
+        # Take top N confusions for visualization
+        top_n = min(20, len(all_confusions))
+        top_confusions = all_confusions[:top_n]
+        
+        if not top_confusions:
+            print("No character confusions found in test data")
+            return {}
+        
+        # Create visualization
+        fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(16, 8))
+        
+        # Left plot: Bar chart of top confusions
+        labels = [f"'{c1}' → '{c2}'" if c1 and c2 else 
+                 f"'{c1}' → <del>" if c1 else 
+                 f"<ins> → '{c2}'" 
+                 for c1, c2, _ in top_confusions]
+        counts = [count for _, _, count in top_confusions]
+        
+        y_pos = np.arange(len(labels))
+        ax1.barh(y_pos, counts, color='steelblue', alpha=0.7)
+        ax1.set_yticks(y_pos)
+        ax1.set_yticklabels(labels, fontsize=10)
+        ax1.invert_yaxis()
+        ax1.set_xlabel('Frequency', fontsize=12)
+        ax1.set_title('Top 20 Character Confusions in Test Data', fontsize=14, fontweight='bold')
+        ax1.grid(axis='x', alpha=0.3)
+        
+        # Right plot: Confusion matrix heatmap (for most common characters)
+        # Get unique characters involved in confusions
+        unique_chars = set()
+        for c1, c2, _ in top_confusions[:15]:  # Top 15 for matrix
+            if c1: unique_chars.add(c1)
+            if c2: unique_chars.add(c2)
+        
+        char_list = sorted(list(unique_chars))
+        if len(char_list) > 1:
+            matrix = np.zeros((len(char_list), len(char_list)))
+            
+            for c1, c2, count in all_confusions:
+                if c1 in char_list and c2 in char_list:
+                    i = char_list.index(c1)
+                    j = char_list.index(c2)
+                    matrix[i][j] = count
+            
+            # Plot heatmap
+            im = ax2.imshow(matrix, cmap='YlOrRd', aspect='auto')
+            
+            # Set ticks
+            ax2.set_xticks(np.arange(len(char_list)))
+            ax2.set_yticks(np.arange(len(char_list)))
+            ax2.set_xticklabels(char_list, fontsize=11)
+            ax2.set_yticklabels(char_list, fontsize=11)
+            
+            # Rotate x labels
+            plt.setp(ax2.get_xticklabels(), rotation=45, ha="right", rotation_mode="anchor")
+            
+            # Add colorbar
+            cbar = plt.colorbar(im, ax=ax2)
+            cbar.set_label('Frequency', fontsize=11)
+            
+            # Add text annotations for non-zero values
+            for i in range(len(char_list)):
+                for j in range(len(char_list)):
+                    if matrix[i][j] > 0:
+                        text_color = 'white' if matrix[i][j] > matrix.max()/2 else 'black'
+                        ax2.text(j, i, int(matrix[i][j]), ha="center", va="center", 
+                               color=text_color, fontsize=9, fontweight='bold')
+            
+            ax2.set_title('Character Confusion Matrix\n(Typo → Expected)', 
+                         fontsize=14, fontweight='bold')
+            ax2.set_xlabel('Expected Character', fontsize=12)
+            ax2.set_ylabel('Typo Character', fontsize=12)
+        
+        plt.tight_layout()
+        
+        if output_path:
+            plt.savefig(output_path, dpi=300, bbox_inches='tight')
+            print(f"Confusion matrix plot saved to: {output_path}")
+        
+        plt.close()
+        
+        # Return statistics
+        return {
+            'total_confusions': len(all_confusions),
+            'top_confusions': top_confusions,
+            'confusion_matrix': char_confusions
+        }
 
 
 def main():
@@ -396,12 +531,28 @@ def main():
     report_txt = os.path.join(args.output, 'evaluation_report.txt')
     evaluator.generate_report(report_txt, overall_stats)
     
+    # Generate confusion matrix plot
+    print("\n" + "=" * 80)
+    print("GENERATING CONFUSION MATRIX VISUALIZATION")
+    print("=" * 80)
+    
+    confusion_plot = os.path.join(args.output, 'confusion_matrix.png')
+    confusion_stats = evaluator.generate_character_confusion_matrix(confusion_plot)
+    
+    if confusion_stats:
+        print(f"\nTop 5 Character Confusions:")
+        for i, (c1, c2, count) in enumerate(confusion_stats['top_confusions'][:5], 1):
+            c1_display = c1 if c1 else '<empty>'
+            c2_display = c2 if c2 else '<empty>'
+            print(f"  {i}. '{c1_display}' → '{c2_display}': {count} occurrences")
+    
     print("\n" + "=" * 80)
     print("EVALUATION COMPLETE")
     print("=" * 80)
     print(f"Results directory: {args.output}")
     print(f"  - evaluation_results.json (detailed JSON)")
     print(f"  - evaluation_report.txt (text report)")
+    print(f"  - confusion_matrix.png (character confusion visualization)")
 
 
 if __name__ == "__main__":
